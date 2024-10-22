@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<eventCollection xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/andreaskasper/wsdc/refs/heads/main/xml/schemas/event.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="v0.1">
+  <event>
+    <name>Testevent</name>
+    <location type="venue">
+      <name>D-TownSwing 2024</name>
+      <address />
+      <phone>string</phone>
+      <phone>string</phone>
+      <phone>string</phone>
+    </location>
+    <location type="hotel">
+      <name>The Niu Düsseldorf</name>
+      <address />
+      <phone>string</phone>
+    </location>
+    <competition />
+    <competition />
+    <competition />
+  </event>
+</eventCollection>
