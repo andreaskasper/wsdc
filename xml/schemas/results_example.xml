@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                 xsi:noNamespaceSchemaLocation="wsdc-event-results-improved.xsd" 
+                 version="v1.0" 
+                 generated="2025-12-11T10:30:00Z">
+	
+	<!-- FIRST EVENT: German Open 2025 -->
+	<event type="wsdc-registry">
+		<name>German Open 2025</name>
+		<eventId>evt-2025-de-001</eventId>
+		<wsdcRegistryId>WSDC-12345</wsdcRegistryId>
+		
+		<dates>
+			<startDate>2025-08-07</startDate>
+			<endDate>2025-08-10</endDate>
+		</dates>
+		
+		<organizer>
+			<name>German Swing Dance Association</name>
+			<wsdcMemberId>WSDC-M-789</wsdcMemberId>
+			<email>director@germanopen.de</email>
+			<phone>+49 761 1234567</phone>
+		</organizer>
+		
+		<location type="venue">
+			<name>Konzerthaus Freiburg</name>
+			<address>
+				<street>Konrad-Adenauer-Platz 1</street>
+				<postalCode>79098</postalCode>
+				<city>Freiburg im Breisgau</city>
+				<state>Baden-Württemberg</state>
+				<country>Germany</country>
+				<coordinates>
+					<latitude>47.9959</latitude>
+					<longitude>7.8522</longitude>
+				</coordinates>
+			</address>
+			<phone type="venue">+49 761 3881-0</phone>
+		</location>
+		
+		<venue>
+			<mainBallroomFloorSize unit="sqm">250</mainBallroomFloorSize>
+			<meetsWsdcRequirements>true</meetsWsdcRequirements>
+		</venue>
+		
+		<competitions>
+			<!-- NOVICE JACK & JILL -->
+			<competition status="completed">
+				<competitionId>comp-de-2025-001-nov-jj</competitionId>
+				<name>Novice Jack &amp; Jill</name>
+				<type>jack-and-jill</type>
+				<division>novice</division>
+				
+				<tier calculated="true">
+					<leaderTier competitorCount="18">2</leaderTier>
+					<followerTier competitorCount="35">3</followerTier>
+				</tier>
+				
+				<scheduledDateTime>2025-08-08T14:00:00Z</scheduledDateTime>
+				<meetsMinimumRequirements>true</meetsMinimumRequirements>
+				
+				<competitors totalLeaders="18" totalFollowers="35">
+					<competitor competitorId="c001">
+						<wsdcId>12345</wsdcId>
+						<name>
+							<firstName>John</firstName>
+							<lastName>Doe</lastName>
+						</name>
+						<role>leader</role>
+						<registrationRole>primary</registrationRole>
+						<bibNumber>101</bibNumber>
+					</competitor>
+					
+					<competitor competitorId="c002">
+						<wsdcId>67890</wsdcId>
+						<name>
+							<firstName>Jane</firstName>
+							<lastName>Smith</lastName>
+						</name>
+						<role>follower</role>
+						<registrationRole>primary</registrationRole>
+						<bibNumber>201</bibNumber>
+					</competitor>
+					
+					<competitor competitorId="c003">
+						<wsdcId>11111</wsdcId>
+						<name>
+							<firstName>Michael</firstName>
+							<lastName>Johnson</lastName>
+						</name>
+						<role>leader</role>
+						<registrationRole>primary</registrationRole>
+						<bibNumber>102</bibNumber>
+					</competitor>
+					
+					<competitor competitorId="c004">
+						<wsdcId>22222</wsdcId>
+						<name>
+							<firstName>Sarah</firstName>
+							<lastName>Williams</lastName>
+						</name>
+						<role>follower</role>
+						<registrationRole>primary</registrationRole>
+						<bibNumber>202</bibNumber>
+					</competitor>
+					
+					<competitor competitorId="c005">
+						<name>
+							<firstName>Tom</firstName>
+							<lastName>Brown</lastName>
+						</name>
+						<role>leader</role>
+						<registrationRole>primary</registrationRole>
+						<bibNumber>103</bibNumber>
+					</competitor>
+					
+					<competitor competitorId="c006">
+						<name>
+							<firstName>Emma</firstName>
+							<lastName>Davis</lastName>
+						</name>
+						<role>follower</role>
+						<registrationRole>primary</registrationRole>
+						<bibNumber>203</bibNumber>
+					</competitor>
+					
+					<!-- More competitors would be listed here -->
+				</competitors>
+				
+				<judgingPanel>
+					<chiefJudge judgeId="j-chief">
+						<name>Robert Martinez</name>
+						<wsdcId>WSDC-J-555</wsdcId>
+					</chiefJudge>
+					
+					<judges count="7">
+						<judge judgeId="j1">
+							<name>Judge One</name>
+							<wsdcId>WSDC-J-101</wsdcId>
+						</judge>
+						<judge judgeId="j2">
+							<name>Judge Two</name>
+							<wsdcId>WSDC-J-102</wsdcId>
+						</judge>
+						<judge judgeId="j3">
+							<name>Judge Three</name>
+							<wsdcId>WSDC-J-103</wsdcId>
+						</judge>
+						<judge judgeId="j4">
+							<name>Judge Four</name>
+							<wsdcId>WSDC-J-104</wsdcId>
+						</judge>
+						<judge judgeId="j5">
+							<name>Judge Five</name>
+							<wsdcId>WSDC-J-105</wsdcId>
+						</judge>
+						<judge judgeId="j6">
+							<name>Judge Six</name>
+							<wsdcId>WSDC-J-106</wsdcId>
+						</judge>
+						<judge judgeId="j7">
+							<name>Judge Seven</name>
+							<wsdcId>WSDC-J-107</wsdcId>
+						</judge>
+					</judges>
+				</judgingPanel>
+				
+				<results>
+					<round>finals</round>
+					<scoringMethod>relative-placement</scoringMethod>
+					
+					<placements>
+						<!-- 1st Place -->
+						<placement>
+							<rank>1</rank>
+							<couple coupleId="couple-01">
+								<leader competitorId="c001">
+									<wsdcId>12345</wsdcId>
+									<name>John Doe</name>
+								</leader>
+								<follower competitorId="c002">
+									<wsdcId>67890</wsdcId>
+									<name>Jane Smith</name>
+								</follower>
+							</couple>
+							<pointsAwarded>
+								<leaderPoints>9</leaderPoints>
+								<followerPoints>12</followerPoints>
+							</pointsAwarded>
+							<judgeScores>
+								<judgeScore judgeId="j1" placement="1">1</judgeScore>
+								<judgeScore judgeId="j2" placement="1">1</judgeScore>
+								<judgeScore judgeId="j3" placement="2">2</judgeScore>
+								<judgeScore judgeId="j4" placement="1">1</judgeScore>
+								<judgeScore judgeId="j5" placement="1">1</judgeScore>
+								<judgeScore judgeId="j6" placement="2">2</judgeScore>
+								<judgeScore judgeId="j7" placement="1">1</judgeScore>
+							</judgeScores>
+							<rpssDetails>
+								<majorityAt>1</majorityAt>
+								<ordinalSum>9</ordinalSum>
+							</rpssDetails>
+						</placement>
+						
+						<!-- 2nd Place -->
+						<placement>
+							<rank>2</rank>
+							<couple coupleId="couple-02">
+								<leader competitorId="c003">
+									<wsdcId>11111</wsdcId>
+									<name>Michael Johnson</name>
+								</leader>
+								<follower competitorId="c004">
+									<wsdcId>22222</wsdcId>
+									<name>Sarah Williams</name>
+								</follower>
+							</couple>
+							<pointsAwarded>
+								<leaderPoints>7</leaderPoints>
+								<followerPoints>9</followerPoints>
+							</pointsAwarded>
+							<judgeScores>
+								<judgeScore judgeId="j1" placement="2">2</judgeScore>
+								<judgeScore judgeId="j2" placement="2">2</judgeScore>
+								<judgeScore judgeId="j3" placement="1">1</judgeScore>
+								<judgeScore judgeId="j4" placement="3">3</judgeScore>
+								<judgeScore judgeId="j5" placement="2">2</judgeScore>
+								<judgeScore judgeId="j6" placement="1">1</judgeScore>
+								<judgeScore judgeId="j7" placement="2">2</judgeScore>
+							</judgeScores>
+							<rpssDetails>
+								<majorityAt>2</majorityAt>
+								<ordinalSum>13</ordinalSum>
+							</rpssDetails>
+						</placement>
+						
+						<!-- 3rd Place -->
+						<placement>
+							<rank>3</rank>
+							<couple coupleId="couple-03">
+								<leader competitorId="c005">
+									<name>Tom Brown</name>
+								</leader>
+								<follower competitorId="c006">
+									<name>Emma Davis</name>
+								</follower>
+							</couple>
+							<pointsAwarded>
+								<leaderPoints>5</leaderPoints>
+								<followerPoints>7</followerPoints>
+							</pointsAwarded>
+							<judgeScores>
+								<judgeScore judgeId="j1" placement="3">3</judgeScore>
+								<judgeScore judgeId="j2" placement="3">3</judgeScore>
+								<judgeScore judgeId="j3" placement="3">3</judgeScore>
+								<judgeScore judgeId="j4" placement="2">2</judgeScore>
+								<judgeScore judgeId="j5" placement="3">3</judgeScore>
+								<judgeScore judgeId="j6" placement="4">4</judgeScore>
+								<judgeScore judgeId="j7" placement="3">3</judgeScore>
+							</judgeScores>
+							<rpssDetails>
+								<majorityAt>3</majorityAt>
+								<ordinalSum>21</ordinalSum>
+							</rpssDetails>
+						</placement>
+						
+						<!-- Additional placements would continue here (4th, 5th, etc.) -->
+						
+					</placements>
+				</results>
+			</competition>
+			
+			<!-- MASTERS JACK & JILL -->
+			<competition status="completed">
+				<competitionId>comp-de-2025-002-mast-jj</competitionId>
+				<name>Masters Jack &amp; Jill</name>
+				<type>jack-and-jill</type>
+				<division>novice</division>
+				<ageCategory>masters</ageCategory>
+				
+				<tier calculated="true">
+					<leaderTier competitorCount="12">2</leaderTier>
+					<followerTier competitorCount="14">2</followerTier>
+				</tier>
+				
+				<scheduledDateTime>2025-08-08T16:30:00Z</scheduledDateTime>
+				<meetsMinimumRequirements>true</meetsMinimumRequirements>
+				
+				<!-- Competitors, judging panel, and results would follow similar structure -->
+				
+			</competition>
+		</competitions>
+	</event>
+	
+	<!-- SECOND EVENT: D-Town Swing 2025 -->
+	<event type="wsdc-registry">
+		<name>D-Town Swing 2025</name>
+		<eventId>evt-2025-de-002</eventId>
+		<wsdcRegistryId>WSDC-67890</wsdcRegistryId>
+		
+		<dates>
+			<startDate>2025-06-12</startDate>
+			<endDate>2025-06-15</endDate>
+		</dates>
+		
+		<organizer>
+			<name>D-Town Swing Events GmbH</name>
+			<wsdcMemberId>WSDC-M-456</wsdcMemberId>
+			<email>info@dtownswing.de</email>
+			<phone>+49 211 9876543</phone>
+		</organizer>
+		
+		<location type="venue">
+			<name>CCD Congress Center Düsseldorf</name>
+			<address>
+				<street>Stockumer Kirchstraße 61</street>
+				<postalCode>40474</postalCode>
+				<city>Düsseldorf</city>
+				<state>Nordrhein-Westfalen</state>
+				<country>Germany</country>
+				<coordinates>
+					<latitude>51.2639</latitude>
+					<longitude>6.7905</longitude>
+				</coordinates>
+			</address>
+			<phone type="venue">+49 211 4560-01</phone>
+		</location>
+		
+		<location type="hotel">
+			<name>The Niu Düsseldorf</name>
+			<address>
+				<street>Am Wehrhahn 18</street>
+				<postalCode>40211</postalCode>
+				<city>Düsseldorf</city>
+				<country>Germany</country>
+			</address>
+			<phone type="hotel">+49 211 3020-0</phone>
+		</location>
+		
+		<venue>
+			<mainBallroomFloorSize unit="sqm">320</mainBallroomFloorSize>
+			<meetsWsdcRequirements>true</meetsWsdcRequirements>
+		</venue>
+		
+		<competitions>
+			<!-- ADVANCED JACK & JILL -->
+			<competition status="scheduled">
+				<competitionId>comp-de-dtown-2025-001-adv-jj</competitionId>
+				<name>Advanced Jack &amp; Jill</name>
+				<type>jack-and-jill</type>
+				<division>advanced</division>
+				
+				<tier calculated="true">
+					<leaderTier competitorCount="42">4</leaderTier>
+					<followerTier competitorCount="48">4</followerTier>
+				</tier>
+				
+				<scheduledDateTime>2025-06-14T19:00:00Z</scheduledDateTime>
+				<meetsMinimumRequirements>true</meetsMinimumRequirements>
+				
+				<!-- Competition details would be filled in as registration progresses -->
+				
+			</competition>
+			
+			<!-- ALL-STAR JACK & JILL -->
+			<competition status="registration-open">
+				<competitionId>comp-de-dtown-2025-002-allstar-jj</competitionId>
+				<name>All-Star Jack &amp; Jill</name>
+				<type>jack-and-jill</type>
+				<division>all-star</division>
+				
+				<scheduledDateTime>2025-06-15T20:00:00Z</scheduledDateTime>
+				
+				<!-- Registration still open, tier will be calculated when closed -->
+				
+			</competition>
+		</competitions>
+	</event>
+	
+	<!-- THIRD EVENT: Local Workshop (Non-WSDC) -->
+	<event type="local">
+		<name>Cologne WCS Workshop Weekend</name>
+		<eventId>evt-2025-de-local-001</eventId>
+		
+		<dates>
+			<startDate>2025-03-20</startDate>
+			<endDate>2025-03-22</endDate>
+		</dates>
+		
+		<organizer>
+			<name>Cologne Swing Dance Club</name>
+			<email>info@cologneswing.de</email>
+		</organizer>
+		
+		<location type="venue">
+			<name>Tanzhaus West</name>
+			<address>
+				<city>Cologne</city>
+				<country>Germany</country>
+			</address>
+		</location>
+		
+		<competitions>
+			<!-- Local competitions without WSDC points -->
+			<competition status="completed">
+				<competitionId>comp-cologne-local-001</competitionId>
+				<name>Fun Jack &amp; Jill</name>
+				<type>jack-and-jill</type>
+				<division>novice</division>
+				
+				<scheduledDateTime>2025-03-21T20:00:00Z</scheduledDateTime>
+				
+				<!-- No WSDC requirements for local events -->
+			</competition>
+		</competitions>
+	</event>
+	
+</eventCollection>
