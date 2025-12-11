@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified" 
+           vc:minVersion="1.1">
+	
+	<!-- ROOT ELEMENT: Now supports multiple events -->
+	<xs:element name="eventCollection">
+		<xs:annotation>
+			<xs:documentation>Collection of dance events, festivals, or competition events. Can contain multiple events.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<!-- CHANGED: Now supports multiple events with maxOccurs="unbounded" -->
+				<xs:element name="event" type="eventType" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="version" type="xs:string" use="required"/>
+			<xs:attribute name="generated" type="xs:dateTime" use="optional">
+				<xs:annotation>
+					<xs:documentation>Timestamp when this XML was generated</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- EVENT TYPE -->
+	<xs:complexType name="eventType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			
+			<!-- NEW: Event identification -->
+			<xs:element name="eventId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Internal event ID from your system</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="wsdcRegistryId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>WSDC Registry Event ID (if applicable)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<!-- NEW: Event dates -->
+			<xs:element name="dates">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="startDate" type="xs:date"/>
+						<xs:element name="endDate" type="xs:date"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<!-- NEW: Organizer information -->
+			<xs:element name="organizer" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string"/>
+						<xs:element name="wsdcMemberId" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>WSDC Professional Member ID</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="email" type="xs:string" minOccurs="0"/>
+						<xs:element name="phone" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<!-- IMPROVED: Location with venue requirements -->
+			<xs:element name="location" type="locationType" minOccurs="0"/>
+			
+			<!-- NEW: Venue requirements for WSDC -->
+			<xs:element name="venue" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="mainBallroomFloorSize" minOccurs="0">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:float">
+										<xs:attribute name="unit" type="floorSizeUnitType" use="required"/>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="meetsWsdcRequirements" type="xs:boolean" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Minimum 150 sqm (1600 sq ft) for main ballroom</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<!-- IMPROVED: Competitions with full structure -->
+			<xs:element name="competitions" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="competition" type="competitionType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="type" type="eventTypeEnum" use="optional">
+			<xs:annotation>
+				<xs:documentation>Type of event: registry (WSDC official), non-registry, local, etc.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<!-- NEW: COMPETITION TYPE -->
+	<xs:complexType name="competitionType">
+		<xs:sequence>
+			<xs:element name="competitionId" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Unique identifier for this competition</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="name" type="xs:string"/>
+			
+			<xs:element name="type" type="competitionTypeEnum">
+				<xs:annotation>
+					<xs:documentation>Jack &amp; Jill, Strictly, Classic, Showcase, etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="division" type="divisionEnum">
+				<xs:annotation>
+					<xs:documentation>Skill level division</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="ageCategory" type="ageCategoryEnum" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Optional age-based category (Juniors, Sophisticated, Masters)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<!-- NEW: Tier information -->
+			<xs:element name="tier" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="leaderTier" type="tierType"/>
+						<xs:element name="followerTier" type="tierType"/>
+					</xs:sequence>
+					<xs:attribute name="calculated" type="xs:boolean" default="true">
+						<xs:annotation>
+							<xs:documentation>Whether tiers were auto-calculated from competitor counts</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			
+			<!-- NEW: Competition date/time -->
+			<xs:element name="scheduledDateTime" type="xs:dateTime" minOccurs="0"/>
+			
+			<!-- NEW: Minimum requirements check -->
+			<xs:element name="meetsMinimumRequirements" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Minimum 5 unique leaders AND 5 unique followers in finals for WSDC points</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<!-- NEW: Competitors -->
+			<xs:element name="competitors" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="competitor" type="competitorType" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute name="totalLeaders" type="xs:int"/>
+					<xs:attribute name="totalFollowers" type="xs:int"/>
+				</xs:complexType>
+			</xs:element>
+			
+			<!-- NEW: Judging panel -->
+			<xs:element name="judgingPanel" type="judgingPanelType" minOccurs="0"/>
+			
+			<!-- NEW: Results -->
+			<xs:element name="results" type="resultsType" minOccurs="0"/>
+			
+		</xs:sequence>
+		<xs:attribute name="status" type="competitionStatusEnum" default="scheduled"/>
+	</xs:complexType>
+	
+	<!-- NEW: COMPETITOR TYPE -->
+	<xs:complexType name="competitorType">
+		<xs:sequence>
+			<xs:element name="wsdcId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>WSDC Competitor ID (assigned after first point)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="name">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="firstName" type="xs:string"/>
+						<xs:element name="lastName" type="xs:string"/>
+						<xs:element name="displayName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Optional local/native name display</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="role" type="roleEnum"/>
+			
+			<xs:element name="registrationRole" type="registrationRoleEnum" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Primary or Secondary role registration</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="petition" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="petitionType" type="petitionTypeEnum"/>
+						<xs:element name="approved" type="xs:boolean"/>
+						<xs:element name="approvedBy" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Chief Judge or WSDC (for petition up)</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="bibNumber" type="xs:string" minOccurs="0"/>
+			
+		</xs:sequence>
+		<xs:attribute name="competitorId" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Internal system ID for this competitor</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<!-- NEW: JUDGING PANEL TYPE -->
+	<xs:complexType name="judgingPanelType">
+		<xs:sequence>
+			<xs:element name="chiefJudge" type="judgeType"/>
+			<xs:element name="secondaryChiefJudge" type="judgeType" minOccurs="0"/>
+			<xs:element name="rawScoreJudge" type="judgeType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Optional separate raw score judge (if not Chief Judge)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="judges">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="judge" type="judgeType" minOccurs="5" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>WSDC requires minimum 5 judges for finals</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="count" type="xs:int" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- NEW: JUDGE TYPE -->
+	<xs:complexType name="judgeType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="wsdcId" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="judgeId" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<!-- NEW: RESULTS TYPE -->
+	<xs:complexType name="resultsType">
+		<xs:sequence>
+			<xs:element name="round" type="roundEnum">
+				<xs:annotation>
+					<xs:documentation>Prelims, Semifinals, or Finals</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="scoringMethod" type="scoringMethodEnum">
+				<xs:annotation>
+					<xs:documentation>WSDC requires Relative Placement for finals</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="placements">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="placement" type="placementType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- NEW: PLACEMENT TYPE -->
+	<xs:complexType name="placementType">
+		<xs:sequence>
+			<xs:element name="rank" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Final placement (1st, 2nd, 3rd, etc.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="couple">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="leader" type="competitorRefType"/>
+						<xs:element name="follower" type="competitorRefType"/>
+					</xs:sequence>
+					<xs:attribute name="coupleId" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			
+			<xs:element name="pointsAwarded" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="leaderPoints" type="xs:float"/>
+						<xs:element name="followerPoints" type="xs:float"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<!-- Judge scores -->
+			<xs:element name="judgeScores">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="judgeScore" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:int">
+										<xs:attribute name="judgeId" type="xs:string" use="required"/>
+										<xs:attribute name="placement" type="xs:int" use="required">
+											<xs:annotation>
+												<xs:documentation>Judge's ordinal placement for this couple</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+			<!-- NEW: RPSS calculation details (optional, for transparency) -->
+			<xs:element name="rpssDetails" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="majorityAt" type="xs:int">
+							<xs:annotation>
+								<xs:documentation>At what placement level did this couple achieve majority</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ordinalSum" type="xs:int">
+							<xs:annotation>
+								<xs:documentation>Sum of placements ≤k for tie-breaking</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- NEW: COMPETITOR REFERENCE TYPE -->
+	<xs:complexType name="competitorRefType">
+		<xs:sequence>
+			<xs:element name="wsdcId" type="xs:string" minOccurs="0"/>
+			<xs:element name="name" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="competitorId" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<!-- NEW: TIER TYPE -->
+	<xs:complexType name="tierType">
+		<xs:simpleContent>
+			<xs:extension base="xs:int">
+				<xs:attribute name="competitorCount" type="xs:int" use="required">
+					<xs:annotation>
+						<xs:documentation>Number of competitors for this role that determined the tier</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<!-- EXISTING: LOCATION TYPE (kept from your original) -->
+	<xs:complexType name="locationType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+			<xs:element name="address" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="street" type="xs:string" minOccurs="0"/>
+						<xs:element name="postalCode" type="xs:string" minOccurs="0"/>
+						<xs:element name="city" type="xs:string" minOccurs="0"/>
+						<xs:element name="state" type="xs:string" minOccurs="0"/>
+						<xs:element name="country" type="xs:string" minOccurs="0"/>
+						<xs:element name="coordinates" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="latitude" type="xs:float"/>
+									<xs:element name="longitude" type="xs:float"/>
+									<xs:element name="altitude" type="xs:float" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="phone" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="type" type="xs:string"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="type" type="xs:string"/>
+	</xs:complexType>
+	
+	<!-- ENUMERATIONS -->
+	
+	<xs:simpleType name="eventTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="wsdc-registry"/>
+			<xs:enumeration value="non-registry"/>
+			<xs:enumeration value="local"/>
+			<xs:enumeration value="workshop"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="competitionTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="jack-and-jill"/>
+			<xs:enumeration value="strictly"/>
+			<xs:enumeration value="classic"/>
+			<xs:enumeration value="showcase"/>
+			<xs:enumeration value="rising-star"/>
+			<xs:enumeration value="pro-am"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="divisionEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="newcomer"/>
+			<xs:enumeration value="novice"/>
+			<xs:enumeration value="intermediate"/>
+			<xs:enumeration value="advanced"/>
+			<xs:enumeration value="all-star"/>
+			<xs:enumeration value="champion"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ageCategoryEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="juniors"/>
+			<xs:enumeration value="sophisticated">
+				<xs:annotation>
+					<xs:documentation>Age 35+</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="masters">
+				<xs:annotation>
+					<xs:documentation>Age 50+</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="roleEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="leader"/>
+			<xs:enumeration value="follower"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="registrationRoleEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="primary"/>
+			<xs:enumeration value="secondary"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="petitionTypeEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="up">
+				<xs:annotation>
+					<xs:documentation>Petition to dance one level up (requires WSDC pre-approval)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="down">
+				<xs:annotation>
+					<xs:documentation>Petition to dance one level down (Chief Judge approval at event)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="competitionStatusEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="scheduled"/>
+			<xs:enumeration value="registration-open"/>
+			<xs:enumeration value="registration-closed"/>
+			<xs:enumeration value="in-progress"/>
+			<xs:enumeration value="completed"/>
+			<xs:enumeration value="cancelled"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="roundEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="prelims"/>
+			<xs:enumeration value="semifinals"/>
+			<xs:enumeration value="finals"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="scoringMethodEnum">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="relative-placement">
+				<xs:annotation>
+					<xs:documentation>WSDC Relative Placement Scoring System (RPSS) - required for finals</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="raw-score">
+				<xs:annotation>
+					<xs:documentation>Used for prelims/semifinals</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="redraw">
+				<xs:annotation>
+					<xs:documentation>Prelims redraw method</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="floorSizeUnitType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="sqm">
+				<xs:annotation>
+					<xs:documentation>Square meters (WSDC minimum: 150)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="sqft">
+				<xs:annotation>
+					<xs:documentation>Square feet (WSDC minimum: 1600)</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>
