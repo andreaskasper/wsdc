@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report version="0.2">
+    <event>
+        <name>Something Swing 2026</name>
+        <id type="wsdc">123-2026-10</id>
+        <datestart>2026-05-01</datestart>
+        <dateend>2026-05-03</dateend>
+        <location type="venue">
+            <name>Special Castle</name>
+            <address>
+                <street>Beispielstraße 1</street>
+                <zip>12345</zip>
+                <city>Musterstadt</city>
+                <country>DEU</country>
+            </address>
+            <email>venue@example.com</email>
+            <phone type="business">+49 1805 445745-050</phone>
+        </location>
+        <location type="hotel">
+            <name>The Niu Düsseldorf</name>
+            <address>
+                <street>Beispielstraße 1</street>
+                <zip>12345</zip>
+                <city>Musterstadt</city>
+                <country>DEU</country>
+            </address>
+            <email>test@example.com</email>
+            <phone>string</phone>
+        </location>
+        <organisation>
+            <name>Testorganisation</name>
+            <address>
+                <street>Beispielstraße 1</street>
+                <zip>12345</zip>
+                <city>Musterstadt</city>
+                <country>DEU</country>
+            </address>
+            <email>test@example.com</email>
+            <phone type="business">+49 1805 445745-050</phone>
+        </organisation>
+        <person>
+            <role>organizer</role>
+            <firstname>Max</firstname>
+            <lastname>Mustermann</lastname>
+            <address>
+                <street>Beispielstraße 1</street>
+                <zip>12345</zip>
+                <city>Musterstadt</city>
+                <country>DEU</country>
+            </address>
+            <email>test@example.com</email>
+            <phone type="mobile">+49 170 1234567</phone>
+        </person>
+        <person>
+            <role>headjudge</role>
+            <firstname>Max</firstname>
+            <lastname>Mustermann</lastname>
+            <address>
+                <street>Beispielstraße 1</street>
+                <zip>12345</zip>
+                <city>Musterstadt</city>
+                <country>DEU</country>
+            </address>
+            <email>test@example.com</email>
+            <phone type="mobile">+49 170 1234567</phone>
+        </person>
+        <competitions>
+            <competition id="c1">
+                <name>Newcomer Jack&amp;Jill</name>
+                <wsdc_category>NEW</wsdc_category>
+                <rounds>
+                    <round type="prelim">
+                        <judges>
+                            <judge id="j1">
+                                <firstname>Judge</firstname>
+                                <lastname>One</lastname>
+                                <wsdc>12345</wsdc>
+                            </judge>
+                            <judge id="j2">
+                                <firstname>Judge</firstname>
+                                <lastname>Two</lastname>
+                                <wsdc>23456</wsdc>
+                            </judge>
+                        </judges>
+                        <results>
+                            <result callback="yes">
+                                <role>L</role>
+                                <participant>p1</participant>
+                                <score judge="j1" points="10" raw="87.5">yes</score>
+                                <score judge="j1" points="4.5" raw="70.3">alt1</score>
+                            </result>
+                        </results>
+                    </round>
+                    <round type="final">
+                        <judges>
+                            <judge id="j1">
+                                <firstname>Judge</firstname>
+                                <lastname>One</lastname>
+                                <wsdc>12345</wsdc>
+                            </judge>
+                            <judge id="j2">
+                                <firstname>Judge</firstname>
+                                <lastname>Two</lastname>
+                                <wsdc>23456</wsdc>
+                            </judge>
+                        </judges>
+                        <results>
+                            <result rank="1">
+                                <role>L</role>
+                                <participant>p1</participant>
+                                <partner>p2</partner>
+                                <score judge="j1" raw="95.5">1</score>
+                                <score judge="j2" raw="87.5">2</score>
+                            </result>
+                        </results>
+                    </round>
+                </rounds>
+            </competition>
+            <competition id="c2">
+                <name>Novice Jack&amp;Jill</name>
+                <wsdc_category>NOV</wsdc_category>
+                <rounds>
+                    <round type="prelim">
+                        <judges>
+                            <judge id="j1">
+                                <firstname>Judge</firstname>
+                                <lastname>One</lastname>
+                                <wsdc>12345</wsdc>
+                            </judge>
+                            <judge id="j2">
+                                <firstname>Judge</firstname>
+                                <lastname>Two</lastname>
+                                <wsdc>23456</wsdc>
+                            </judge>
+                        </judges>
+                        <results>
+                            <result callback="yes">
+                                <role>L</role>
+                                <participant>p1</participant>
+                                <score judge="j1" points="10" raw="87.5">yes</score>
+                                <score judge="j1" points="4.5" raw="70.3">alt1</score>
+                            </result>
+                        </results>
+                    </round>
+                    <round type="final">
+                        <judges>
+                            <judge id="j1">
+                                <firstname>Judge</firstname>
+                                <lastname>One</lastname>
+                                <wsdc>12345</wsdc>
+                            </judge>
+                            <judge id="j2">
+                                <firstname>Judge</firstname>
+                                <lastname>Two</lastname>
+                                <wsdc>23456</wsdc>
+                            </judge>
+                        </judges>
+                        <results>
+                            <result rank="1">
+                                <participant>p1</participant>
+                                <score judge="j1" raw="95.5">1</score>
+                                <score judge="j2" raw="87.5">2</score>
+                            </result>
+                        </results>
+                    </round>
+                </rounds>
+            </competition>
+        </competitions>
+        <participants total="150">
+            <participant id="p1">
+                <bib>101</bib>
+                <id type="wsdc">123456</id>
+                <firstname>Anna</firstname>
+                <lastname>Example</lastname>
+                <wsdc>12345</wsdc>
+                <address>
+                    <city>Musterstadt</city>
+                    <country>DEU</country>
+                </address>
+            </participant>
+            <participant id="p2">
+                <bib>102</bib>
+                <id type="wsdc">24567</id>
+                <lastname>Doe</lastname>
+            </participant>
+            <participant id="p3">
+                <bib>103</bib>
+                <id type="wsdc">34567</id>
+                <firstname>Jane</firstname>
+                <lastname>Doe</lastname>
+            </participant>
+        </participants>
+    </event>
+</report>
