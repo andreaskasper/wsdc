@@ -81,8 +81,10 @@
             <competition id="c1" scorer="scorer1">
                 <name>Newcomer Jack&amp;Jill</name>
                 <wsdc_category>NEW</wsdc_category>
+                <number_competitors role="L" tier="3">35</number_competitors>
+                <number_competitors role="F" tier="3">29</number_competitors>
                 <rounds>
-                    <round type="prelim" scorer="scorer1">
+                    <round type="prelim" tablet="true" scorer="scorer1">
                         <judges>
                             <judge id="j1">
                                 <firstname>Judge</firstname>
@@ -101,11 +103,31 @@
                                 <role>L</role>
                                 <participant>p1</participant>
                                 <score judge="j1" points="10" raw="87.5">yes</score>
-                                <score judge="j1" points="4.5" raw="70.3">alt1</score>
+                                <score judge="j2" points="4.5" raw="70.3">alt1</score>
+                            </result>
+                            <result callback="alt1">
+                                <role>L</role>
+                                <participant>p2</participant>
+                                <score judge="j1" points="10" raw="87.5">yes</score>
+                                <score judge="j2" points="4.3" raw="68.3">alt2</score>
+                            </result>
+                            <result callback="no">
+                                <role>L</role>
+                                <participant>p3</participant>
+                                <score judge="j1" points="0" raw="20" violation="SVW1,RV1">no</score>
+                                <score judge="j2" points="0" raw="25">no</score>
+                                <violation>SVW1</violation>
+                                <violation>RV1</violation>
+                            </result>
+                            <result callback="yes">
+                                <role>F</role>
+                                <participant>p10</participant>
+                                <score judge="j1" points="10" raw="87.5">yes</score>
+                                <score judge="j2" points="10" raw="70.3">yes</score>
                             </result>
                         </results>
                     </round>
-                    <round type="final">
+                    <round type="final" paper="true">
                         <judges>
                             <judge id="j1">
                                 <firstname>Judge</firstname>
