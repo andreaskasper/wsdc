@@ -64,12 +64,25 @@
             <email>test@example.com</email>
             <phone type="mobile">+49 170 1234567</phone>
         </person>
+        <person id="scorer1">
+            <role>scorer</role>
+            <firstname>Max</firstname>
+            <lastname>Mustermann</lastname>
+            <address>
+                <street>Beispielstraße 1</street>
+                <zip>12345</zip>
+                <city>Musterstadt</city>
+                <country>DEU</country>
+            </address>
+            <email>test@example.com</email>
+            <phone type="mobile">+49 170 1234567</phone>
+        </person>
         <competitions>
-            <competition id="c1">
+            <competition id="c1" scorer="scorer1">
                 <name>Newcomer Jack&amp;Jill</name>
                 <wsdc_category>NEW</wsdc_category>
                 <rounds>
-                    <round type="prelim">
+                    <round type="prelim" scorer="scorer1">
                         <judges>
                             <judge id="j1">
                                 <firstname>Judge</firstname>
