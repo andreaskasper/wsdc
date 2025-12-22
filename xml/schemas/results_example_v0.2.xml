@@ -77,6 +77,7 @@
                                 <wsdc>12345</wsdc>
                             </judge>
                             <judge id="j2">
+                                <role>headjudge</role>
                                 <firstname>Judge</firstname>
                                 <lastname>Two</lastname>
                                 <wsdc>23456</wsdc>
