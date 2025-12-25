@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <!-- Root Element -->
+    <xs:element name="report">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="event" type="EventType" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="version" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Simple Types / Enumerations -->
+    <xs:simpleType name="WSDCCategoryType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NEW"/>
+            <xs:enumeration value="NOV"/>
+            <xs:enumeration value="INT"/>
+            <xs:enumeration value="ADV"/>
+            <xs:enumeration value="ALS"/>
+            <xs:enumeration value="CHMP"/>
+            <xs:enumeration value="SOPH"/>
+            <xs:enumeration value="MAST"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="PersonRoleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="organizer"/>
+            <xs:enumeration value="headjudge"/>
+            <xs:enumeration value="scorer"/>
+            <xs:enumeration value="dj"/>
+            <xs:enumeration value="compcoordinator"/>
+            <xs:enumeration value="marshalling"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="JudgeRoleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="headjudge"/>
+            <xs:enumeration value="rawscorejudge"/>
+            <xs:enumeration value="referee"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="LocationTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="venue"/>
+            <xs:enumeration value="hotel"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="PhoneTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="business"/>
+            <xs:enumeration value="mobile"/>
+            <xs:enumeration value="private"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="RoundTypeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="prelim"/>
+            <xs:enumeration value="quarter"/>
+            <xs:enumeration value="semi"/>
+            <xs:enumeration value="final"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="CallbackType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes"/>
+            <xs:enumeration value="no"/>
+            <xs:enumeration value="alt1"/>
+            <xs:enumeration value="alt2"/>
+            <xs:enumeration value="alt3"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="CompetitorRoleType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="L"/>
+            <xs:enumeration value="F"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TierType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="CountryCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="ViolationCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Complex Types -->
+    <xs:complexType name="AddressType">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string" minOccurs="0"/>
+            <xs:element name="zip" type="xs:string" minOccurs="0"/>
+            <xs:element name="city" type="xs:string" minOccurs="0"/>
+            <xs:element name="country" type="CountryCodeType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="LocationType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="address" type="AddressType" minOccurs="0"/>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="phone" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="PhoneTypeType" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="type" type="LocationTypeType" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="OrganisationType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="address" type="AddressType" minOccurs="0"/>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="phone" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="PhoneTypeType" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="PersonType">
+        <xs:sequence>
+            <xs:element name="role" type="PersonRoleType"/>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+            <xs:element name="address" type="AddressType" minOccurs="0"/>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="phone" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="PhoneTypeType" use="optional"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="PayPalType">
+        <xs:sequence>
+            <xs:element name="txnid" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ParticipantType">
+        <xs:sequence>
+            <xs:element name="bib" type="xs:string" minOccurs="0"/>
+            <xs:element name="id" minOccurs="0">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+            <xs:element name="wsdc" type="xs:string" minOccurs="0"/>
+            <xs:element name="address" type="AddressType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ParticipantsType">
+        <xs:sequence>
+            <xs:element name="participant" type="ParticipantType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="total" type="xs:integer" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="JudgeType">
+        <xs:sequence>
+            <xs:element name="role" type="JudgeRoleType" minOccurs="0"/>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+            <xs:element name="wsdc" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="ScoreType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="judge" type="xs:string" use="required"/>
+                <xs:attribute name="points" type="xs:decimal" use="optional"/>
+                <xs:attribute name="raw" type="xs:decimal" use="optional"/>
+                <xs:attribute name="violation" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="ResultType">
+        <xs:sequence>
+            <xs:element name="role" type="CompetitorRoleType" minOccurs="0"/>
+            <xs:element name="participant" type="xs:IDREF"/>
+            <xs:element name="partner" type="xs:IDREF" minOccurs="0"/>
+            <xs:element name="score" type="ScoreType" maxOccurs="unbounded"/>
+            <xs:element name="violation" type="ViolationCodeType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="callback" type="CallbackType" use="optional"/>
+        <xs:attribute name="rank" type="xs:integer" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="RoundType">
+        <xs:sequence>
+            <xs:element name="judges">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="judge" type="JudgeType" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="results">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="result" type="ResultType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="type" type="RoundTypeType" use="required"/>
+        <xs:attribute name="tablet" type="xs:boolean" use="optional"/>
+        <xs:attribute name="paper" type="xs:boolean" use="optional"/>
+        <xs:attribute name="scorer" type="xs:IDREF" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="NumberCompetitorsType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="role" type="CompetitorRoleType" use="required"/>
+                <xs:attribute name="tier" type="TierType" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="CompetitionType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="wsdc_category" type="WSDCCategoryType"/>
+            <xs:element name="number_competitors" type="NumberCompetitorsType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="rounds">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="round" type="RoundType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="scorer" type="xs:IDREF" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="EventType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="id">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="type" type="xs:string" use="required"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="datestart" type="xs:date"/>
+            <xs:element name="dateend" type="xs:date"/>
+            <xs:element name="paypal" type="PayPalType" minOccurs="0"/>
+            <xs:element name="location" type="LocationType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="organisation" type="OrganisationType" minOccurs="0"/>
+            <xs:element name="person" type="PersonType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="competitions">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="competition" type="CompetitionType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="participants" type="ParticipantsType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
