@@ -5,6 +5,9 @@
         <id type="wsdc">123-2026-10</id>
         <datestart>2026-05-01</datestart>
         <dateend>2026-05-03</dateend>
+        <paypal>
+            <txnid>ABCDEFGHIJKLMMNO123</txnid>
+        </paypal>
         <location type="venue">
             <name>Special Castle</name>
             <address>
