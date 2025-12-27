@@ -3,89 +3,296 @@
     
     <!-- Root Element -->
     <xs:element name="report">
+        <xs:annotation>
+            <xs:documentation>
+                Root element containing all event reports for WSDC registry submission.
+                Each report can contain multiple events and must specify a version number.
+            </xs:documentation>
+        </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="event" type="EventType" maxOccurs="unbounded"/>
+                <xs:element name="event" type="EventType" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            One or more West Coast Swing events being reported.
+                            Each event represents a complete competition with dates, locations, and results.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
             </xs:sequence>
-            <xs:attribute name="version" type="xs:string" use="required"/>
+            <xs:attribute name="version" type="xs:string" use="required">
+                <xs:annotation>
+                    <xs:documentation>
+                        Version of the WSDC report format being used (e.g., "0.2").
+                        This helps ensure compatibility with the registry system.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
     
     <!-- Simple Types / Enumerations -->
     <xs:simpleType name="WSDCCategoryType">
+        <xs:annotation>
+            <xs:documentation>
+                WSDC competition categories representing skill levels in West Coast Swing.
+                Categories determine point values and advancement opportunities for dancers.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="NEW"/>
-            <xs:enumeration value="NOV"/>
-            <xs:enumeration value="INT"/>
-            <xs:enumeration value="ADV"/>
-            <xs:enumeration value="ALS"/>
-            <xs:enumeration value="CHMP"/>
-            <xs:enumeration value="SOPH"/>
-            <xs:enumeration value="MAST"/>
+            <xs:enumeration value="NEW">
+                <xs:annotation>
+                    <xs:documentation>Newcomer - Entry level for first-time competitors</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="NOV">
+                <xs:annotation>
+                    <xs:documentation>Novice - For dancers with basic competition experience</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="INT">
+                <xs:annotation>
+                    <xs:documentation>Intermediate - For developing competitive dancers</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ADV">
+                <xs:annotation>
+                    <xs:documentation>Advanced - For experienced competitive dancers</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ALS">
+                <xs:annotation>
+                    <xs:documentation>All-Star - Elite level competitive dancers</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="CHMP">
+                <xs:annotation>
+                    <xs:documentation>Champion - Highest competitive level</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="SOPH">
+                <xs:annotation>
+                    <xs:documentation>Sophisticated - Masters age category (typically 40+)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="MAST">
+                <xs:annotation>
+                    <xs:documentation>Masters - Senior age category (typically 50+)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="PersonRoleType">
+        <xs:annotation>
+            <xs:documentation>
+                Roles that event personnel can fulfill in organizing and running competitions.
+                Multiple people can have the same role, and one person can have multiple roles.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="organizer"/>
-            <xs:enumeration value="headjudge"/>
-            <xs:enumeration value="scorer"/>
-            <xs:enumeration value="dj"/>
-            <xs:enumeration value="compcoordinator"/>
-            <xs:enumeration value="marshalling"/>
+            <xs:enumeration value="organizer">
+                <xs:annotation>
+                    <xs:documentation>Event organizer responsible for overall event planning</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="headjudge">
+                <xs:annotation>
+                    <xs:documentation>Head judge overseeing judging panels and competition integrity</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="scorer">
+                <xs:annotation>
+                    <xs:documentation>Person responsible for tabulating competition results</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dj">
+                <xs:annotation>
+                    <xs:documentation>DJ providing music for competitions</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="compcoordinator">
+                <xs:annotation>
+                    <xs:documentation>Competition coordinator managing competition logistics</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="marshalling">
+                <xs:annotation>
+                    <xs:documentation>Personnel managing dancer flow and floor marshalling</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="JudgeRoleType">
+        <xs:annotation>
+            <xs:documentation>
+                Specific judging roles within a competition round.
+                Judges may have different responsibilities depending on the scoring system used.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="headjudge"/>
-            <xs:enumeration value="rawscorejudge"/>
-            <xs:enumeration value="referee"/>
+            <xs:enumeration value="headjudge">
+                <xs:annotation>
+                    <xs:documentation>Lead judge for this specific round</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="rawscorejudge">
+                <xs:annotation>
+                    <xs:documentation>Judge providing raw numerical scores</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="referee">
+                <xs:annotation>
+                    <xs:documentation>Referee overseeing rules compliance</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="LocationTypeType">
+        <xs:annotation>
+            <xs:documentation>
+                Type of physical location where the event takes place.
+                Helps participants understand accommodation and venue arrangements.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="venue"/>
-            <xs:enumeration value="hotel"/>
+            <xs:enumeration value="venue">
+                <xs:annotation>
+                    <xs:documentation>Dedicated competition venue (ballroom, convention center, etc.)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="hotel">
+                <xs:annotation>
+                    <xs:documentation>Hotel serving as both venue and accommodation</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="PhoneTypeType">
+        <xs:annotation>
+            <xs:documentation>
+                Type of phone number being provided for contact purposes.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="business"/>
-            <xs:enumeration value="mobile"/>
-            <xs:enumeration value="private"/>
+            <xs:enumeration value="business">
+                <xs:annotation>
+                    <xs:documentation>Business phone number</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mobile">
+                <xs:annotation>
+                    <xs:documentation>Mobile/cell phone number</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="private">
+                <xs:annotation>
+                    <xs:documentation>Private/home phone number</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="RoundTypeType">
+        <xs:annotation>
+            <xs:documentation>
+                Type of competition round in the progression from preliminaries to finals.
+                Not all competitions use all round types.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="prelim"/>
-            <xs:enumeration value="quarter"/>
-            <xs:enumeration value="semi"/>
-            <xs:enumeration value="final"/>
+            <xs:enumeration value="prelim">
+                <xs:annotation>
+                    <xs:documentation>Preliminary round - initial competition round</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="quarter">
+                <xs:annotation>
+                    <xs:documentation>Quarter-final round</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="semi">
+                <xs:annotation>
+                    <xs:documentation>Semi-final round</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="final">
+                <xs:annotation>
+                    <xs:documentation>Final round - determines final placements and points</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="CallbackType">
+        <xs:annotation>
+            <xs:documentation>
+                Callback status indicating whether a competitor advances to the next round.
+                Alternates (alt1, alt2, alt3) are ordered backups who advance if regular callbacks withdraw.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="yes"/>
-            <xs:enumeration value="no"/>
-            <xs:enumeration value="alt1"/>
-            <xs:enumeration value="alt2"/>
-            <xs:enumeration value="alt3"/>
+            <xs:enumeration value="yes">
+                <xs:annotation>
+                    <xs:documentation>Competitor advances to next round</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="no">
+                <xs:annotation>
+                    <xs:documentation>Competitor does not advance</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="alt1">
+                <xs:annotation>
+                    <xs:documentation>First alternate - advances if a callback withdraws</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="alt2">
+                <xs:annotation>
+                    <xs:documentation>Second alternate</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="alt3">
+                <xs:annotation>
+                    <xs:documentation>Third alternate</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="CompetitorRoleType">
+        <xs:annotation>
+            <xs:documentation>
+                Role of a competitor in a partnership. In West Coast Swing, traditionally
+                one dancer leads (L) and one follows (F), though modern competitions
+                may have same-role partnerships.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="L"/>
-            <xs:enumeration value="F"/>
+            <xs:enumeration value="L">
+                <xs:annotation>
+                    <xs:documentation>Leader role in the partnership</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="F">
+                <xs:annotation>
+                    <xs:documentation>Follower role in the partnership</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="TierType">
+        <xs:annotation>
+            <xs:documentation>
+                Tier level for WSDC points calculation (1-6).
+                Higher tier events award more points. Tier is determined by
+                prize money, number of competitors, and other event criteria.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:integer">
             <xs:minInclusive value="1"/>
             <xs:maxInclusive value="6"/>
@@ -93,12 +300,24 @@
     </xs:simpleType>
     
     <xs:simpleType name="CountryCodeType">
+        <xs:annotation>
+            <xs:documentation>
+                Three-letter ISO 3166-1 alpha-3 country code (e.g., USA, GBR, DEU).
+                Used for participant and location addresses.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="[A-Z]{3}"/>
         </xs:restriction>
     </xs:simpleType>
     
     <xs:simpleType name="ViolationCodeType">
+        <xs:annotation>
+            <xs:documentation>
+                Code identifying a specific rule violation (e.g., illegal costume, late entry).
+                Format: uppercase letters and numbers. Specific codes defined by WSDC rules.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="[A-Z0-9]+"/>
         </xs:restriction>
@@ -106,42 +325,118 @@
     
     <!-- Complex Types -->
     <xs:complexType name="AddressType">
+        <xs:annotation>
+            <xs:documentation>
+                Physical mailing address for locations, organizations, or individuals.
+                All fields are optional to accommodate varying address formats internationally.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="street" type="xs:string" minOccurs="0"/>
-            <xs:element name="zip" type="xs:string" minOccurs="0"/>
-            <xs:element name="city" type="xs:string" minOccurs="0"/>
-            <xs:element name="country" type="CountryCodeType" minOccurs="0"/>
+            <xs:element name="street" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Street address including number and street name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="zip" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Postal/ZIP code</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="city" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>City or municipality name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="country" type="CountryCodeType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Three-letter ISO country code (e.g., USA, CAN, GBR)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="LocationType">
+        <xs:annotation>
+            <xs:documentation>
+                Physical location where the event takes place (venue or hotel).
+                Multiple locations can be specified if competitions occur at different sites.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="address" type="AddressType" minOccurs="0"/>
-            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Name of the venue or hotel</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="AddressType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Physical address of the location</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Contact email for the location</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="phone" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Contact phone number for the location</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:string">
-                            <xs:attribute name="type" type="PhoneTypeType" use="optional"/>
+                            <xs:attribute name="type" type="PhoneTypeType" use="optional">
+                                <xs:annotation>
+                                    <xs:documentation>Type of phone number (business, mobile, private)</xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="type" type="LocationTypeType" use="required"/>
+        <xs:attribute name="type" type="LocationTypeType" use="required">
+            <xs:annotation>
+                <xs:documentation>Type of location (venue or hotel)</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="OrganisationType">
+        <xs:annotation>
+            <xs:documentation>
+                Organization responsible for hosting the event (e.g., dance studio, event company).
+                Provides official contact information for the organizing entity.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="address" type="AddressType" minOccurs="0"/>
-            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Official name of the organizing organization</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="AddressType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Business address of the organization</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Contact email for the organization</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="phone" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Contact phone number for the organization</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:string">
-                            <xs:attribute name="type" type="PhoneTypeType" use="optional"/>
+                            <xs:attribute name="type" type="PhoneTypeType" use="optional">
+                                <xs:annotation>
+                                    <xs:documentation>Type of phone number (business, mobile, private)</xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
@@ -150,166 +445,621 @@
     </xs:complexType>
     
     <xs:complexType name="PersonType">
+        <xs:annotation>
+            <xs:documentation>
+                Individual person involved in organizing or running the event.
+                Can have multiple roles (organizer, head judge, scorer, etc.).
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="role" type="PersonRoleType"/>
-            <xs:element name="firstname" type="xs:string"/>
-            <xs:element name="lastname" type="xs:string"/>
-            <xs:element name="address" type="AddressType" minOccurs="0"/>
-            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="role" type="PersonRoleType">
+                <xs:annotation>
+                    <xs:documentation>Primary role this person fulfills at the event</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstname" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Person's first name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastname" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Person's last name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="AddressType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Person's contact address</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Person's contact email</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="phone" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Person's contact phone number</xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:string">
-                            <xs:attribute name="type" type="PhoneTypeType" use="optional"/>
+                            <xs:attribute name="type" type="PhoneTypeType" use="optional">
+                                <xs:annotation>
+                                    <xs:documentation>Type of phone number (business, mobile, private)</xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="id" type="xs:ID" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Unique identifier for this person within the document.
+                    Used to reference this person as a scorer in competitions or rounds.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="PayPalType">
+        <xs:annotation>
+            <xs:documentation>
+                PayPal payment information for WSDC registration fees.
+                Used to verify event payment and enable competition reporting.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="txnid" type="xs:string"/>
+            <xs:element name="txnid" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>PayPal transaction ID for the event registration payment</xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="ParticipantType">
+        <xs:annotation>
+            <xs:documentation>
+                Individual participant (dancer) in the event competitions.
+                Each participant must have a unique ID within the document for result referencing.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="bib" type="xs:string" minOccurs="0"/>
+            <xs:element name="bib" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Bib number or identifier worn by the dancer during competition.
+                        Used for visual identification on the dance floor.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="id" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        External identifier from another system (e.g., event management software).
+                        The 'type' attribute specifies which system this ID comes from.
+                    </xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:string">
-                            <xs:attribute name="type" type="xs:string" use="required"/>
+                            <xs:attribute name="type" type="xs:string" use="required">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Type or source system of the external ID
+                                        (e.g., "eventbrite", "dancereg", "internal")
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="firstname" type="xs:string"/>
-            <xs:element name="lastname" type="xs:string"/>
-            <xs:element name="wsdc" type="xs:string" minOccurs="0"/>
-            <xs:element name="address" type="AddressType" minOccurs="0"/>
+            <xs:element name="firstname" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Participant's first name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastname" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Participant's last name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="wsdc" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Participant's WSDC registry ID number.
+                        Used to match this participant with their existing WSDC profile.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="AddressType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Participant's mailing address</xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="id" type="xs:ID" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Unique identifier for this participant within the document.
+                    Referenced by result entries to indicate who competed.
+                    Format: typically "p1", "p2", etc., but any unique ID is valid.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="ParticipantsType">
+        <xs:annotation>
+            <xs:documentation>
+                Container for all participants in the event.
+                Lists all dancers who competed in any division.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="participant" type="ParticipantType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="participant" type="ParticipantType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Individual participant entry</xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
-        <xs:attribute name="total" type="xs:integer" use="optional"/>
+        <xs:attribute name="total" type="xs:integer" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Total number of unique participants in the event.
+                    Useful for validation and summary statistics.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="JudgeType">
+        <xs:annotation>
+            <xs:documentation>
+                Judge for a specific competition round.
+                Judges provide scores and determine placements for competitors.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="role" type="JudgeRoleType" minOccurs="0"/>
-            <xs:element name="firstname" type="xs:string"/>
-            <xs:element name="lastname" type="xs:string"/>
-            <xs:element name="wsdc" type="xs:string" minOccurs="0"/>
+            <xs:element name="role" type="JudgeRoleType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Specific role this judge fulfills in the round
+                        (head judge, raw score judge, or referee)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstname" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Judge's first name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastname" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Judge's last name</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="wsdc" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Judge's WSDC registry ID if they are registered.
+                        Helps track judging history and qualifications.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="id" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Unique identifier for this judge within the round.
+                    Referenced by score elements to indicate which judge gave each score.
+                    Format: typically "j1", "j2", etc.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="ScoreType">
+        <xs:annotation>
+            <xs:documentation>
+                Individual score given by one judge for one competitor in a round.
+                Can include raw scores, adjusted points, and violation penalties.
+            </xs:documentation>
+        </xs:annotation>
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="judge" type="xs:string" use="required"/>
-                <xs:attribute name="points" type="xs:decimal" use="optional"/>
-                <xs:attribute name="raw" type="xs:decimal" use="optional"/>
-                <xs:attribute name="violation" type="xs:string" use="optional"/>
+                <xs:attribute name="judge" type="xs:string" use="required">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Reference to the judge ID who gave this score.
+                            Must match a judge ID from the round's judge list.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="points" type="xs:decimal" use="optional">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Final adjusted points awarded to the competitor by this judge.
+                            May differ from raw score due to violations or scoring system rules.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="raw" type="xs:decimal" use="optional">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Raw score before any adjustments or penalties.
+                            Useful for transparency and dispute resolution.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="violation" type="xs:string" use="optional">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Violation code if this judge assessed a penalty.
+                            References a ViolationCodeType for specific infraction.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
     
     <xs:complexType name="ResultType">
+        <xs:annotation>
+            <xs:documentation>
+                Complete result entry for one competitor (or partnership) in a round.
+                Includes all scores from all judges, final placement, and callback status.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="role" type="CompetitorRoleType" minOccurs="0"/>
-            <xs:element name="participant" type="xs:IDREF"/>
-            <xs:element name="partner" type="xs:IDREF" minOccurs="0"/>
-            <xs:element name="score" type="ScoreType" maxOccurs="unbounded"/>
-            <xs:element name="violation" type="ViolationCodeType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="role" type="CompetitorRoleType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Role of this competitor in the partnership (Leader or Follower).
+                        Important for proper point attribution in Jack &amp; Jill divisions.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="participant" type="xs:IDREF">
+                <xs:annotation>
+                    <xs:documentation>
+                        Reference to the participant ID from the participants list.
+                        This is the primary competitor for this result.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="partner" type="xs:IDREF" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Reference to the partner's participant ID for partnership divisions.
+                        Omitted for solo competitions like Jack &amp; Jill.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="score" type="ScoreType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Individual scores from each judge for this competitor.
+                        Number of score elements should match number of judges in the round.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="violation" type="ViolationCodeType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Overall competition violations assessed to this competitor.
+                        May affect final placement or eligibility for points.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
-        <xs:attribute name="callback" type="CallbackType" use="optional"/>
-        <xs:attribute name="rank" type="xs:integer" use="optional"/>
+        <xs:attribute name="callback" type="CallbackType" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Whether this competitor advances to the next round.
+                    Values: yes, no, alt1, alt2, alt3 (for alternates).
+                    Only relevant for non-final rounds.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="rank" type="xs:integer" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Final placement/ranking in this round (1 = first place, 2 = second, etc.).
+                    Especially important in final rounds for WSDC point calculation.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="RoundType">
+        <xs:annotation>
+            <xs:documentation>
+                Single competition round (prelim, quarter-final, semi-final, or final).
+                Contains the judge panel and all competitor results for this round.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="judges">
+                <xs:annotation>
+                    <xs:documentation>
+                        Panel of judges for this round.
+                        Each judge must have a unique ID used in score attribution.
+                    </xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="judge" type="JudgeType" maxOccurs="unbounded"/>
+                        <xs:element name="judge" type="JudgeType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Individual judge on the panel</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
             <xs:element name="results">
+                <xs:annotation>
+                    <xs:documentation>
+                        All competitor results for this round.
+                        Each result represents one competitor or partnership's performance.
+                    </xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="result" type="ResultType" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="result" type="ResultType" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Individual competitor/partnership result</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="type" type="RoundTypeType" use="required"/>
-        <xs:attribute name="tablet" type="xs:boolean" use="optional"/>
-        <xs:attribute name="paper" type="xs:boolean" use="optional"/>
-        <xs:attribute name="scorer" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="type" type="RoundTypeType" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    Type of round (prelim, quarter, semi, or final).
+                    Determines how results are interpreted and points calculated.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="tablet" type="xs:boolean" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Whether electronic tablet scoring was used for this round.
+                    Helps track scoring method for accuracy verification.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="paper" type="xs:boolean" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Whether paper ballots were used for this round.
+                    Some events use hybrid systems with both methods.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="scorer" type="xs:IDREF" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Reference to the person ID who tabulated this round's results.
+                    Useful for accountability and questions about scoring.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="NumberCompetitorsType">
+        <xs:annotation>
+            <xs:documentation>
+                Number of competitors in a specific role and tier for WSDC point calculations.
+                Used to determine the point tier for the competition.
+            </xs:documentation>
+        </xs:annotation>
         <xs:simpleContent>
             <xs:extension base="xs:integer">
-                <xs:attribute name="role" type="CompetitorRoleType" use="required"/>
-                <xs:attribute name="tier" type="TierType" use="optional"/>
+                <xs:attribute name="role" type="CompetitorRoleType" use="required">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Role being counted (Leader or Follower).
+                            Point tiers may differ based on role participation.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="tier" type="TierType" use="optional">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Calculated WSDC point tier (1-6) based on competitor count.
+                            Determines point values for this competition.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:attribute>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
     
     <xs:complexType name="CompetitionType">
+        <xs:annotation>
+            <xs:documentation>
+                Single competition division within an event (e.g., Novice Jack &amp; Jill, Advanced Strictly).
+                Contains metadata, competitor counts, and all rounds with complete results.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="wsdc_category" type="WSDCCategoryType"/>
-            <xs:element name="number_competitors" type="NumberCompetitorsType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Name of the competition division (e.g., "Novice Jack &amp; Jill", "Advanced Strictly Swing").
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="wsdc_category" type="WSDCCategoryType">
+                <xs:annotation>
+                    <xs:documentation>
+                        WSDC skill category/level for this competition.
+                        Determines which dancers are eligible and point values awarded.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="number_competitors" type="NumberCompetitorsType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Count of competitors by role (and optionally tier).
+                        Multiple entries can show Leaders and Followers separately.
+                        Used for WSDC point tier calculation.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="rounds">
+                <xs:annotation>
+                    <xs:documentation>
+                        All competition rounds from preliminaries through finals.
+                        Order typically progresses from prelim → quarter → semi → final.
+                    </xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="round" type="RoundType" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="round" type="RoundType" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Individual competition round</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="scorer" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="id" type="xs:ID" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Unique identifier for this competition within the event.
+                    Can be referenced by scorer assignments if needed.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="scorer" type="xs:IDREF" use="optional">
+            <xs:annotation>
+                <xs:documentation>
+                    Reference to the person ID who tabulated this competition's results.
+                    Provides accountability for the entire competition.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
     </xs:complexType>
     
     <xs:complexType name="EventType">
+        <xs:annotation>
+            <xs:documentation>
+                Complete West Coast Swing event containing multiple competition divisions.
+                Represents one event submission to the WSDC registry system.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>
+                        Official name of the event as it appears in WSDC registry
+                        (e.g., "Phoenix Champions Cup 2024", "Toronto Swing Dance Classic").
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="id">
+                <xs:annotation>
+                    <xs:documentation>
+                        Event identifier with its source system type.
+                        Used to track the event across different systems.
+                    </xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:simpleContent>
                         <xs:extension base="xs:string">
-                            <xs:attribute name="type" type="xs:string" use="required"/>
+                            <xs:attribute name="type" type="xs:string" use="required">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Type or source of the event ID (e.g., "wsdc", "internal", "eventbrite").
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:attribute>
                         </xs:extension>
                     </xs:simpleContent>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="datestart" type="xs:date"/>
-            <xs:element name="dateend" type="xs:date"/>
-            <xs:element name="paypal" type="PayPalType" minOccurs="0"/>
-            <xs:element name="location" type="LocationType" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="organisation" type="OrganisationType" minOccurs="0"/>
-            <xs:element name="person" type="PersonType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="datestart" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>
+                        Event start date in ISO 8601 format (YYYY-MM-DD).
+                        Typically the first day of competitions.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateend" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>
+                        Event end date in ISO 8601 format (YYYY-MM-DD).
+                        Typically the last day of competitions.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="paypal" type="PayPalType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        PayPal payment information for WSDC registration fees.
+                        Required for events to be officially registered with WSDC.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="location" type="LocationType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Physical venue(s) or hotel(s) where the event takes place.
+                        Multiple locations can be specified if competitions occur at different sites.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="organisation" type="OrganisationType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Organization responsible for hosting the event.
+                        Provides official contact for the organizing entity.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="person" type="PersonType" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>
+                        Key personnel involved in organizing and running the event.
+                        Can include organizers, head judges, scorers, DJs, etc.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element name="competitions">
+                <xs:annotation>
+                    <xs:documentation>
+                        All competition divisions held at this event.
+                        Each division (Novice, Intermediate, Advanced, etc.) is a separate competition.
+                    </xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="competition" type="CompetitionType" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element name="competition" type="CompetitionType" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Individual competition division</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="participants" type="ParticipantsType"/>
+            <xs:element name="participants" type="ParticipantsType">
+                <xs:annotation>
+                    <xs:documentation>
+                        Complete list of all dancers who participated in any competition at the event.
+                        Each participant gets a unique ID used to reference them in results.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
     
