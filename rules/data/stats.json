@@ -1,0 +1,793 @@
+{
+ "versions": {
+  "2002-RPR": {
+   "words": 491,
+   "units": 13,
+   "headings": 1,
+   "rules": 0,
+   "tables": 0,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {}
+  },
+  "2004-RPR": {
+   "words": 693,
+   "units": 10,
+   "headings": 1,
+   "rules": 0,
+   "tables": 0,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 1,
+    "moved": 2,
+    "same": 1,
+    "removed": 11,
+    "added": 8
+   }
+  },
+  "2007-RPR": {
+   "words": 1079,
+   "units": 25,
+   "headings": 3,
+   "rules": 7,
+   "tables": 0,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 5,
+    "moved": 4,
+    "removed": 5,
+    "added": 20
+   }
+  },
+  "2009-RPR": {
+   "words": 1149,
+   "units": 31,
+   "headings": 2,
+   "rules": 8,
+   "tables": 3,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 12,
+    "moved": 14,
+    "same": 6,
+    "removed": 7,
+    "added": 13
+   }
+  },
+  "2011-RPR": {
+   "words": 1189,
+   "units": 30,
+   "headings": 2,
+   "rules": 8,
+   "tables": 3,
+   "marked_yellow_words": 3,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 8,
+    "same": 22,
+    "removed": 1
+   }
+  },
+  "2012-RPR": {
+   "words": 1209,
+   "units": 34,
+   "headings": 2,
+   "rules": 13,
+   "tables": 2,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 13,
+    "same": 14,
+    "removed": 3,
+    "added": 7
+   }
+  },
+  "2014-RPR": {
+   "words": 1281,
+   "units": 34,
+   "headings": 2,
+   "rules": 13,
+   "tables": 2,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 27,
+    "changed": 7
+   }
+  },
+  "2015-02-RPR": {
+   "words": 1232,
+   "units": 33,
+   "headings": 2,
+   "rules": 12,
+   "tables": 2,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 15,
+    "same": 16,
+    "moved": 16,
+    "removed": 3,
+    "added": 2
+   }
+  },
+  "2015-RPR": {
+   "words": 1207,
+   "units": 25,
+   "headings": 1,
+   "rules": 12,
+   "tables": 2,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 15,
+    "changed": 7,
+    "moved": 15,
+    "removed": 11,
+    "added": 3
+   }
+  },
+  "2015-RER": {
+   "words": 2637,
+   "units": 62,
+   "headings": 6,
+   "rules": 47,
+   "tables": 0,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {}
+  },
+  "2018.1A-RER": {
+   "words": 3382,
+   "units": 137,
+   "headings": 17,
+   "rules": 92,
+   "tables": 2,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 27,
+    "moved": 28,
+    "same": 1,
+    "removed": 34,
+    "added": 109
+   }
+  },
+  "2018.1A-RPR": {
+   "words": 1478,
+   "units": 42,
+   "headings": 8,
+   "rules": 24,
+   "tables": 2,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 1,
+    "moved": 1,
+    "removed": 24,
+    "added": 41
+   }
+  },
+  "2018.1B-RPR": {
+   "words": 1478,
+   "units": 42,
+   "headings": 8,
+   "rules": 24,
+   "tables": 2,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 41,
+    "changed": 1
+   }
+  },
+  "2019.1A-RER": {
+   "words": 3346,
+   "units": 155,
+   "headings": 20,
+   "rules": 98,
+   "tables": 3,
+   "marked_yellow_words": 666,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 93,
+    "moved": 105,
+    "same": 19,
+    "removed": 25,
+    "added": 43
+   }
+  },
+  "2019.1A-RPR": {
+   "words": 1508,
+   "units": 47,
+   "headings": 9,
+   "rules": 27,
+   "tables": 2,
+   "marked_yellow_words": 195,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 35,
+    "moved": 8,
+    "same": 4,
+    "removed": 3,
+    "added": 8
+   }
+  },
+  "2020.1A-RER": {
+   "words": 3606,
+   "units": 160,
+   "headings": 20,
+   "rules": 103,
+   "tables": 3,
+   "marked_yellow_words": 266,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 132,
+    "changed": 22,
+    "removed": 1,
+    "added": 6
+   }
+  },
+  "2020.1A-RPR": {
+   "words": 1686,
+   "units": 53,
+   "headings": 9,
+   "rules": 33,
+   "tables": 2,
+   "marked_yellow_words": 200,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 41,
+    "changed": 6,
+    "moved": 1,
+    "added": 6
+   }
+  },
+  "2021-05-ADD": {
+   "words": 1135,
+   "units": 37,
+   "headings": 6,
+   "rules": 15,
+   "tables": 0,
+   "marked_yellow_words": 0,
+   "marked_green_words": 0,
+   "changes": {}
+  },
+  "2023.1B": {
+   "words": 5888,
+   "units": 229,
+   "headings": 30,
+   "rules": 150,
+   "tables": 6,
+   "marked_yellow_words": 1033,
+   "marked_green_words": 0,
+   "changes": {
+    "changed": 89,
+    "moved": 124,
+    "same": 51,
+    "removed": 73,
+    "added": 89
+   }
+  },
+  "2023.1C": {
+   "words": 5944,
+   "units": 231,
+   "headings": 30,
+   "rules": 151,
+   "tables": 6,
+   "marked_yellow_words": 1003,
+   "marked_green_words": 155,
+   "changes": {
+    "same": 212,
+    "changed": 16,
+    "removed": 1,
+    "added": 3
+   }
+  },
+  "2024.1A": {
+   "words": 6833,
+   "units": 246,
+   "headings": 34,
+   "rules": 149,
+   "tables": 6,
+   "marked_yellow_words": 1183,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 124,
+    "changed": 64,
+    "moved": 48,
+    "removed": 43,
+    "added": 58
+   }
+  },
+  "2024.1B": {
+   "words": 6841,
+   "units": 247,
+   "headings": 34,
+   "rules": 149,
+   "tables": 6,
+   "marked_yellow_words": 1184,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 242,
+    "changed": 4,
+    "added": 1
+   }
+  },
+  "2024.2A": {
+   "words": 7212,
+   "units": 254,
+   "headings": 34,
+   "rules": 154,
+   "tables": 6,
+   "marked_yellow_words": 1160,
+   "marked_green_words": 566,
+   "changes": {
+    "same": 226,
+    "changed": 18,
+    "moved": 8,
+    "removed": 3,
+    "added": 10
+   }
+  },
+  "2024.2B": {
+   "words": 7261,
+   "units": 255,
+   "headings": 34,
+   "rules": 154,
+   "tables": 6,
+   "marked_yellow_words": 1160,
+   "marked_green_words": 635,
+   "changes": {
+    "same": 235,
+    "changed": 19,
+    "moved": 8,
+    "added": 1
+   }
+  },
+  "2025.1A": {
+   "words": 7670,
+   "units": 272,
+   "headings": 36,
+   "rules": 166,
+   "tables": 6,
+   "marked_yellow_words": 1579,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 152,
+    "changed": 78,
+    "moved": 16,
+    "removed": 25,
+    "added": 42
+   }
+  },
+  "2026.1A": {
+   "words": 7682,
+   "units": 290,
+   "headings": 36,
+   "rules": 185,
+   "tables": 7,
+   "marked_yellow_words": 1059,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 161,
+    "changed": 83,
+    "moved": 101,
+    "removed": 28,
+    "added": 46
+   }
+  },
+  "2026.1B": {
+   "words": 7344,
+   "units": 280,
+   "headings": 34,
+   "rules": 185,
+   "tables": 7,
+   "marked_yellow_words": 1059,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 244,
+    "changed": 36,
+    "moved": 1,
+    "removed": 10
+   }
+  },
+  "2026.1C": {
+   "words": 7338,
+   "units": 280,
+   "headings": 34,
+   "rules": 185,
+   "tables": 7,
+   "marked_yellow_words": 1053,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 274,
+    "changed": 6
+   }
+  },
+  "2026.1D": {
+   "words": 7430,
+   "units": 289,
+   "headings": 36,
+   "rules": 185,
+   "tables": 7,
+   "marked_yellow_words": 1051,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 274,
+    "changed": 6,
+    "moved": 1,
+    "added": 9
+   }
+  },
+  "2024.1DRAFT": {
+   "words": 6611,
+   "units": 242,
+   "headings": 33,
+   "rules": 147,
+   "tables": 6,
+   "marked_yellow_words": 936,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 132,
+    "changed": 58,
+    "moved": 49,
+    "removed": 41,
+    "added": 52
+   }
+  },
+  "2025.DRAFT.v4": {
+   "words": 7587,
+   "units": 272,
+   "headings": 36,
+   "rules": 167,
+   "tables": 6,
+   "marked_yellow_words": 1424,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 163,
+    "changed": 71,
+    "moved": 12,
+    "removed": 21,
+    "added": 38
+   }
+  },
+  "2026.DRAFT": {
+   "words": 7642,
+   "units": 289,
+   "headings": 36,
+   "rules": 185,
+   "tables": 7,
+   "marked_yellow_words": 1019,
+   "marked_green_words": 0,
+   "changes": {
+    "same": 161,
+    "changed": 83,
+    "moved": 101,
+    "removed": 28,
+    "added": 45
+   }
+  },
+  "2027.V.3": {
+   "words": 8468,
+   "units": 339,
+   "headings": 39,
+   "rules": 228,
+   "tables": 7,
+   "marked_yellow_words": 0,
+   "marked_green_words": 737,
+   "changes": {
+    "same": 147,
+    "changed": 120,
+    "moved": 68,
+    "removed": 13,
+    "added": 72
+   }
+  },
+  "2027.V.4": {
+   "words": 8560,
+   "units": 342,
+   "headings": 39,
+   "rules": 231,
+   "tables": 7,
+   "marked_yellow_words": 0,
+   "marked_green_words": 835,
+   "changes": {
+    "same": 332,
+    "changed": 6,
+    "moved": 1,
+    "removed": 1,
+    "added": 4
+   }
+  }
+ },
+ "sections": {
+  "[Points are awarded as follows:]": {
+   "2004-RPR": 7,
+   "2007-RPR": 4
+  },
+  "(top)": {
+   "2004-RPR": 6,
+   "2007-RPR": 7,
+   "2009-RPR": 14,
+   "2011-RPR": 8,
+   "2012-RPR": 7,
+   "2014-RPR": 4,
+   "2015-02-RPR": 4,
+   "2015-RPR": 10,
+   "2018.1A-RER": 9,
+   "2018.1A-RPR": 15,
+   "2019.1A-RER": 11,
+   "2019.1A-RPR": 6,
+   "2023.1B": 15,
+   "2024.1A": 2,
+   "2025.1A": 1,
+   "2026.1A": 2,
+   "2026.1B": 1,
+   "2026.1D": 1,
+   "2024.1DRAFT": 3,
+   "2025.DRAFT.v4": 1,
+   "2026.DRAFT": 2,
+   "2027.V.3": 2
+  },
+  "Note:": {
+   "2004-RPR": 7
+  },
+  "Points are awarded as follows:": {
+   "2007-RPR": 5,
+   "2009-RPR": 3
+  },
+  "FREQUENTLY ASKED QUESTIONS & FURTHER CLARIFICATIONS": {
+   "2007-RPR": 14,
+   "2009-RPR": 15,
+   "2011-RPR": 1,
+   "2012-RPR": 16,
+   "2014-RPR": 3,
+   "2015-02-RPR": 16,
+   "2015-RPR": 7
+  },
+  "ADDITIONAL CONTEST POINTS RECORDING RULES:": {
+   "2015-RPR": 4,
+   "2018.1A-RPR": 15
+  },
+  "WSDC REGISTRY EVENTS": {
+   "2018.1A-RER": 4
+  },
+  "PROMOTING ENTITY REQUIREMENTS FOR REGISTRY EVENTS": {
+   "2018.1A-RER": 43,
+   "2019.1A-RER": 13
+  },
+  "MEMBERSHIP DUES AND REQUIREMENTS": {
+   "2018.1A-RER": 7
+  },
+  "REGISTRY EVENT STRUCTURE": {
+   "2018.1A-RER": 10,
+   "2019.1A-RER": 1
+  },
+  "COMPETITION RULES & REQUIREMENTS": {
+   "2018.1A-RER": 42,
+   "2019.1A-RER": 2
+  },
+  "ADDITIONAL EVENT AND COMPETITION RECOMMENDATIONS": {
+   "2018.1A-RER": 13,
+   "2019.1A-RER": 2
+  },
+  "1) PROMOTING ENTITY:": {
+   "2018.1A-RER": 9
+  },
+  "2) COMPETITOR SURCHARGE:": {
+   "2018.1A-RER": 1
+  },
+  "3) COMPETITION RESULTS:": {
+   "2018.1A-RER": 1
+  },
+  "4) EVENT STRUCTURE:": {
+   "2018.1A-RER": 5
+  },
+  "5) COMPETITION RULES & FORMAT:": {
+   "2018.1A-RER": 12
+  },
+  "ADDITIONAL EVENT / COMPETITION RECOMMENDATIONS": {
+   "2018.1A-RER": 5
+  },
+  "COMPETITION RESULTS REPORTING": {
+   "2018.1A-RER": 2,
+   "2019.1A-RER": 1
+  },
+  "COMPETITOR PROCESSING SURCHARGE": {
+   "2018.1A-RER": 7,
+   "2019.1A-RER": 6
+  },
+  "SPECIFIC RULES REGARDING COMPETITOR DIVISIONS AND POINTS": {
+   "2018.1A-RPR": 9
+  },
+  "POINTS REGISTRY": {
+   "2018.1A-RPR": 2,
+   "2018.1B-RPR": 1
+  },
+  "POINT TIERS & POINTS AWARDED CHART": {
+   "2018.1A-RPR": 2,
+   "2019.1A-RPR": 1
+  },
+  "TIER Minimums and Guidelines": {
+   "2018.1A-RPR": 3,
+   "2019.1A-RPR": 1
+  },
+  "RECORDING POINTS RESPONSIBILITIES": {
+   "2018.1A-RPR": 12
+  },
+  "PETITIONS": {
+   "2018.1A-RPR": 8
+  },
+  "WSDC Registry Events": {
+   "2019.1A-RER": 4,
+   "2020.1A-RER": 1,
+   "2023.1B": 3
+  },
+  "Promoting Entity Requirements for Registry Events": {
+   "2019.1A-RER": 39,
+   "2020.1A-RER": 8,
+   "2023.1B": 12
+  },
+  "Membership Dues and Requirements": {
+   "2019.1A-RER": 7,
+   "2023.1B": 2
+  },
+  "Competitor Surcharge": {
+   "2019.1A-RER": 3,
+   "2023.1B": 1
+  },
+  "Competition Results Reporting": {
+   "2019.1A-RER": 4,
+   "2023.1B": 1
+  },
+  "Registry Event Structure": {
+   "2019.1A-RER": 8,
+   "2020.1A-RER": 3
+  },
+  "Competition Requirements": {
+   "2019.1A-RER": 32,
+   "2020.1A-RER": 16,
+   "2023.1B": 73,
+   "2023.1C": 12,
+   "2024.1A": 74,
+   "2024.1B": 4,
+   "2024.2A": 21,
+   "2024.2B": 5,
+   "2025.1A": 56,
+   "2026.1A": 59,
+   "2026.1B": 16,
+   "2026.1C": 4,
+   "2026.1D": 2,
+   "2024.1DRAFT": 64,
+   "2025.DRAFT.v4": 48,
+   "2026.DRAFT": 59,
+   "2027.V.3": 67,
+   "2027.V.4": 6
+  },
+  "WSDC Enforcement Policy and Penalties": {
+   "2019.1A-RER": 13,
+   "2023.1B": 8,
+   "2024.1A": 5,
+   "2024.2A": 1,
+   "2025.1A": 15,
+   "2026.1A": 2,
+   "2026.1C": 1,
+   "2026.1D": 1,
+   "2024.1DRAFT": 5,
+   "2025.DRAFT.v4": 15,
+   "2026.DRAFT": 2,
+   "2027.V.3": 7
+  },
+  "Event and Competition Recommendations": {
+   "2019.1A-RER": 10,
+   "2023.1B": 11
+  },
+  "Computerized Scoring System Requirements": {
+   "2019.1A-RER": 5,
+   "2020.1A-RER": 1,
+   "2023.1B": 3,
+   "2024.1A": 3,
+   "2024.1DRAFT": 3
+  },
+  "Points Registry": {
+   "2019.1A-RPR": 2
+  },
+  "Point Tier Minimums and Guidelines": {
+   "2019.1A-RPR": 8,
+   "2023.1B": 5
+  },
+  "Specific Rules Regarding Competitor Divisions and Points": {
+   "2019.1A-RPR": 9,
+   "2020.1A-RPR": 5,
+   "2023.1B": 5
+  },
+  "Recording Points Responsibilities": {
+   "2019.1A-RPR": 12,
+   "2020.1A-RPR": 4,
+   "2023.1B": 9
+  },
+  "Petitions": {
+   "2019.1A-RPR": 7,
+   "2020.1A-RPR": 3,
+   "2023.1B": 4
+  },
+  "Overview": {
+   "2023.1B": 8,
+   "2024.1A": 22,
+   "2024.2B": 3,
+   "2025.1A": 13,
+   "2026.1A": 23,
+   "2026.1B": 6,
+   "2026.1D": 4,
+   "2024.1DRAFT": 19,
+   "2025.DRAFT.v4": 11,
+   "2026.DRAFT": 22,
+   "2027.V.3": 8
+  },
+  "Registry Events Structure and Ownership": {
+   "2023.1B": 68,
+   "2023.1C": 1,
+   "2024.1A": 42,
+   "2024.2A": 1,
+   "2024.2B": 3,
+   "2025.1A": 36,
+   "2026.1A": 45,
+   "2026.1B": 13,
+   "2026.1C": 1,
+   "2024.1DRAFT": 42,
+   "2025.DRAFT.v4": 34,
+   "2026.DRAFT": 45,
+   "2027.V.3": 54,
+   "2027.V.4": 3
+  },
+  "Membership Dues, Competition Surcharges, and Competitor Results Reporting": {
+   "2023.1B": 19,
+   "2023.1C": 2,
+   "2024.1A": 3,
+   "2025.1A": 4,
+   "2024.1DRAFT": 1,
+   "2025.DRAFT.v4": 4
+  },
+  "Legend": {
+   "2023.1B": 4,
+   "2023.1C": 5,
+   "2024.1A": 7,
+   "2024.1B": 1,
+   "2024.2A": 8,
+   "2024.2B": 9,
+   "2025.1A": 14,
+   "2026.1A": 13,
+   "2026.1B": 7,
+   "2026.1D": 7,
+   "2024.1DRAFT": 7,
+   "2025.DRAFT.v4": 12,
+   "2026.DRAFT": 13
+  },
+  "Callback System for Preliminary Competitions": {
+   "2024.1A": 7,
+   "2024.1DRAFT": 7
+  },
+  "Membership Fee, Competition Surcharges, and Competitor Results Reporting": {
+   "2025.1A": 6,
+   "2026.1A": 10,
+   "2026.1B": 3,
+   "2025.DRAFT.v4": 5,
+   "2026.DRAFT": 10,
+   "2027.V.3": 8
+  },
+  "WSDC Judges Certification and Affiliated Judges Program": {
+   "2026.1A": 3,
+   "2026.DRAFT": 3,
+   "2027.V.3": 3
+  },
+  "Appendix": {
+   "2027.V.3": 56,
+   "2027.V.4": 2
+  }
+ }
+}

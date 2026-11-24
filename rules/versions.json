@@ -1,0 +1,1145 @@
+{
+  "schema": 1,
+  "description": "All known versions of the World Swing Dance Council (WSDC) rules. Points Registry Rules (RPR) and Registry Event Rules (RER) were separate documents until 2020; from 2023.1B on they are one combined document. 'sha256', 'pages' and 'bytes' are filled in by tools/build.py.",
+  "sources": {
+    "worldsdc": "https://www.worldsdc.com/rules/ (official WSDC website; many older PDFs have since been removed from the server)",
+    "wsdc-analytics": "https://wsdc-analytics.github.io/rules_catalog_en.html (archive of WSDC rule documents collected by Denis Balakin)",
+    "chiefjudge": "https://chiefjudge.worldsdc.com/ (WSDC Chief Judge Committee)"
+  },
+  "versions": [
+    {
+      "id": "2002-RPR",
+      "document": "RPR",
+      "title": "Jack & Jill Competitor's Points Registry",
+      "version": null,
+      "effective": "2002",
+      "published": null,
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2002-RPR.pdf",
+      "html": "html/2002-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/WSDC-Points-Registry-2002.pdf",
+        "original_filename": "WSDC-Points-Registry-2002.pdf"
+      },
+      "notes": "Reconstruction: the PDF was generated in 2026 by wsdc-analytics from an archived copy of swingdancecouncil.com (Wayback Machine, 2002-08-09). Not an original WSDC document.",
+      "check_min_coverage": 0.985,
+      "check_note": "PDF text contains Wayback URLs split across lines; they are kept as link targets in the HTML.",
+      "sha256": "fd87d6da48991e1d3bbc424be3d5141829aedffb3c7029776228be8e5c66dae2",
+      "bytes": 4479,
+      "pages": 2,
+      "predecessor": []
+    },
+    {
+      "id": "2004-RPR",
+      "document": "RPR",
+      "title": "Jack & Jill Competitor's Points Registry",
+      "version": null,
+      "effective": "2004-01-04",
+      "published": null,
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2004-RPR.pdf",
+      "html": "html/2004-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/WSDC-Points-Registry-2004.pdf",
+        "original_filename": "WSDC-Points-Registry-2004.pdf"
+      },
+      "notes": "Reconstruction: the PDF was generated in 2026 by wsdc-analytics from an archived copy of swingdancecouncil.com. Not an original WSDC document.",
+      "check_min_coverage": 0.99,
+      "check_note": "PDF text contains Wayback URLs split across lines; they are kept as link targets in the HTML.",
+      "sha256": "a60401b7143d7682f0da0e8cd89ebef2b2c5e0d0282050a2d23d141923481d3b",
+      "bytes": 5104,
+      "pages": 2,
+      "predecessor": [
+        "2002-RPR"
+      ]
+    },
+    {
+      "id": "2007-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Document",
+      "version": null,
+      "effective": "2007-01-01",
+      "published": "2007-01-07",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2007-RPR.pdf",
+      "html": "html/2007-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/WSDC%20Points%20Registry%20Document_2007.pdf",
+        "original_filename": "WSDC Points Registry Document_2007.pdf"
+      },
+      "check_min_coverage": 0.99,
+      "check_note": "The PDF text layer lacks apostrophes and curly quotes (\"event s\"); restored from the page images.",
+      "sha256": "969f9f8e9c10491d0ca878d19c14a927abdc70aae014b07a6e73b31b280c3a07",
+      "bytes": 157925,
+      "pages": 2,
+      "predecessor": [
+        "2004-RPR"
+      ]
+    },
+    {
+      "id": "2007-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Requirements",
+      "version": null,
+      "effective": "2007-11-01",
+      "published": null,
+      "status": "missing",
+      "lang": "en",
+      "pdf": null,
+      "html": null,
+      "notes": "Listed as 'Previous versions dated 11.1.2007' in RER 2019.1A and later; no copy found yet."
+    },
+    {
+      "id": "2009-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Document",
+      "version": null,
+      "effective": "2009-01-01",
+      "published": "2008-12-30",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2009-RPR.pdf",
+      "html": "html/2009-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/WSDC%20Points%20Registry%20Document_2009.pdf",
+        "original_filename": "WSDC Points Registry Document_2009.pdf"
+      },
+      "sha256": "09bf51a62a4e15e6d0bcad666050f215f510ebdcc90b06d6838d842064d7aced",
+      "bytes": 379606,
+      "pages": 2,
+      "predecessor": [
+        "2007-RPR"
+      ]
+    },
+    {
+      "id": "2009-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Requirements",
+      "version": null,
+      "effective": "2009-01-01",
+      "published": null,
+      "status": "missing",
+      "lang": "en",
+      "pdf": null,
+      "html": null,
+      "notes": "Listed as previous version 1.1.2009; no copy found yet."
+    },
+    {
+      "id": "2010-01-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Requirements",
+      "version": null,
+      "effective": "2010-01-01",
+      "published": null,
+      "status": "missing",
+      "lang": "en",
+      "pdf": null,
+      "html": null,
+      "notes": "Listed as update 1-1-10 in RER 2015 and RER 2018.1A; no copy found yet."
+    },
+    {
+      "id": "2010-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Requirements",
+      "version": null,
+      "effective": "2010-09-01",
+      "published": null,
+      "status": "missing",
+      "lang": "en",
+      "pdf": null,
+      "html": null,
+      "notes": "Listed as previous version 9.1.2010; no copy found yet."
+    },
+    {
+      "id": "2011-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Document",
+      "version": null,
+      "effective": "2011-01-01",
+      "published": "2011-01-01",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2011-RPR.pdf",
+      "html": "html/2011-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/WSDC%20Points%20Registry%20Document_2011.pdf",
+        "original_filename": "WSDC Points Registry Document_2011.pdf"
+      },
+      "sha256": "52d60f406bb7cdeea9480f52d150bba43a4ea23b96bb522852cf7f96777c024f",
+      "bytes": 241691,
+      "pages": 2,
+      "predecessor": [
+        "2009-RPR"
+      ]
+    },
+    {
+      "id": "2012-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Document",
+      "version": null,
+      "effective": "2012-01-01",
+      "published": "2011-12",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2012-RPR.pdf",
+      "html": "html/2012-RPR.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20120711021140/http://www.swingdancecouncil.com/library/WSDC%20Points%20Registry%20Document.pdf",
+        "original_filename": "WSDC Points Registry Document.pdf"
+      },
+      "notes": "Footer: 'Points Registry Updated 12.2011 effective 1.1.2012'. Archived copy of swingdancecouncil.com (Wayback Machine, 2012-07-11).",
+      "check_min_coverage": 0.99,
+      "check_note": "The PDF text layer drops curly apostrophes and quotes (\"don t\"); restored from the page images.",
+      "sha256": "71a6421000763b80bad1a98f4a9afc369ee63eae9528fc0bb9a4717bd78b53a9",
+      "bytes": 157361,
+      "pages": 2,
+      "predecessor": [
+        "2011-RPR"
+      ]
+    },
+    {
+      "id": "2012-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Requirements",
+      "version": null,
+      "effective": "2012-01-01",
+      "published": null,
+      "status": "missing",
+      "lang": "en",
+      "pdf": null,
+      "html": null,
+      "notes": "Listed as previous version 1.1.2012; no copy found yet."
+    },
+    {
+      "id": "2014-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Document",
+      "version": null,
+      "effective": "2014-01-01",
+      "published": "2014-01",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2014-RPR.pdf",
+      "html": "html/2014-RPR.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20140809211447/http://www.swingdancecouncil.com/library/WSDC%20Points%20Registry%20Document.pdf",
+        "original_filename": "WSDC Points Registry Document.pdf"
+      },
+      "notes": "Footer: 'Updated 1.2014 effective 1.2014'. Archived copy of swingdancecouncil.com (Wayback Machine, 2014-08-09).",
+      "sha256": "3b1f07d228c7dffe8bc67a79bb8a5ece13e027cc27045d47f90dd29024ab77c2",
+      "bytes": 239650,
+      "pages": 2,
+      "predecessor": [
+        "2012-RPR"
+      ]
+    },
+    {
+      "id": "2015-02-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Document",
+      "version": null,
+      "effective": "2015-02-01",
+      "published": "2015-01",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2015-02-RPR.pdf",
+      "html": "html/2015-02-RPR.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20150608073004/http://www.swingdancecouncil.com/library/WSDC%20Points%20Registry%20Document.pdf",
+        "original_filename": "WSDC Points Registry Document.pdf"
+      },
+      "notes": "Footer: 'Updated 1.2015 effective 2.2015' (new tier structure). Superseded by the clarification of July 1, 2015 (2015-RPR). Archived copy (Wayback Machine, 2015-06-08).",
+      "sha256": "2b0e8d269c53130aed57c0dce762001a5c29fbf5abf36b2719edd04ae199f548",
+      "bytes": 242549,
+      "pages": 2,
+      "predecessor": [
+        "2014-RPR"
+      ]
+    },
+    {
+      "id": "2015-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Document and Rules",
+      "version": null,
+      "effective": "2015-07-01",
+      "published": "2015-07-22",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2015-RPR.pdf",
+      "html": "html/2015-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/WSDC-Points-Registry-Document-7-1-2015.pdf",
+        "original_filename": "WSDC-Points-Registry-Document-7-1-2015.pdf"
+      },
+      "notes": "New tier structure effective February 1, 2015; this document is the clarification of July 1, 2015.",
+      "sha256": "7ef60e172d8b521fef88cbe05aae7020135d442a5720f050a7ec25322ded4789",
+      "bytes": 34703,
+      "pages": 2,
+      "predecessor": [
+        "2015-02-RPR"
+      ],
+      "summary_pdf": "pdf/2015-announcement.pdf"
+    },
+    {
+      "id": "2015-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Rules / Requirements",
+      "version": null,
+      "effective": "2015-07-01",
+      "published": "2015-07-23",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2015-RER.pdf",
+      "html": "html/2015-RER.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/WSDC_Registry_Event_Requirements.pdf",
+        "original_filename": "WSDC_Registry_Event_Requirements.pdf"
+      },
+      "notes": "Header: 'As of January 1, 2007 … (Updated 1-1-09) (Updated 1-1-10) (Updated 9-1-10) (Updated 1-1-12) (Updated 7-1-15)'.",
+      "sha256": "ca1c5711fa18dc7c0c4acae7ccebd8674c603e2127e1dcaea6f33fe132f2fe2e",
+      "bytes": 43316,
+      "pages": 6,
+      "predecessor": [],
+      "summary_pdf": "pdf/2015-announcement.pdf"
+    },
+    {
+      "id": "2018.1A-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Rules / Requirements",
+      "version": "2018.1A",
+      "effective": "2018-01-01",
+      "published": "2018-01-11",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2018.1A-RER.pdf",
+      "html": "html/2018.1A-RER.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2018.1A-Registry-Event-Rules-and-Requirements.pdf",
+        "original_filename": "2018.1A-Registry-Event-Rules-and-Requirements.pdf"
+      },
+      "sha256": "89cad6e21bb2b17307d93d668e06d811976d4c0d204c868b1c4ee2a3f60d8ee4",
+      "bytes": 632342,
+      "pages": 6,
+      "predecessor": [
+        "2015-RER"
+      ]
+    },
+    {
+      "id": "2018.1A-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Rules",
+      "version": "2018.1A",
+      "effective": "2018-01-03",
+      "published": "2017-12-24",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2018.1A-RPR.pdf",
+      "html": "html/2018.1A-RPR.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20201109003552/https://www.worldsdc.com/wp-content/uploads/2017/12/2018.1A-WSDC-Points-Registry-Rules-v2018.1A.pdf",
+        "original_filename": "2018.1A-WSDC-Points-Registry-Rules-v2018.1A.pdf",
+        "removed_from_source": true
+      },
+      "notes": "Replaced four days later by 2018.1B.",
+      "check_min_coverage": 0.98,
+      "check_note": "Same table reading-order effects as 2018.1B-RPR; tables verified against the page images.",
+      "sha256": "fe6f3b621758613f81175f441af9f1ed071f9f91b01f92b76484f124db621328",
+      "bytes": 170632,
+      "pages": 3,
+      "predecessor": [
+        "2015-RPR"
+      ]
+    },
+    {
+      "id": "2018.1B-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Rules",
+      "version": "2018.1B",
+      "effective": "2018-01-03",
+      "published": "2017-12-28",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2018.1B-RPR.pdf",
+      "html": "html/2018.1B-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2018.1B-WSDC-Points-Registry-Rules-v2018.1B.pdf",
+        "original_filename": "2018.1B-WSDC-Points-Registry-Rules-v2018.1B.pdf"
+      },
+      "check_min_coverage": 0.98,
+      "check_note": "Points award table: the PDF text layer reads the superscript ordinals of the header as a separate line; the table was verified against the page image.",
+      "sha256": "ca31e99683eeb3caaee886a18c0c8c96c71cb17184bdb75725a16855ce311bd2",
+      "bytes": 155944,
+      "pages": 3,
+      "predecessor": [
+        "2018.1A-RPR"
+      ]
+    },
+    {
+      "id": "2019.1A-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Rules",
+      "version": "2019.1A",
+      "effective": "2019-02-15",
+      "published": "2019-02-14",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2019.1A-RER.pdf",
+      "html": "html/2019.1A-RER.html",
+      "source": {
+        "via": "worldsdc",
+        "url": "https://worldsdc.com/wp-content/uploads/2019/03/2019.1A-Registry-Event-Rules_Final.pdf",
+        "original_filename": "2019.1A-Registry-Event-Rules_Final.pdf",
+        "removed_from_source": true
+      },
+      "sha256": "4edb94d21368d0f9ee4a6057883e1e296d879268d99be0375d67f611a52a11e8",
+      "bytes": 217375,
+      "pages": 8,
+      "predecessor": [
+        "2018.1A-RER"
+      ]
+    },
+    {
+      "id": "2019.1A-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Rules",
+      "version": "2019.1A",
+      "effective": "2019-02-15",
+      "published": "2019-02-14",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2019.1A-RPR.pdf",
+      "html": "html/2019.1A-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2019.1A-WSDC-Points-Registry-Rules_Final.pdf",
+        "original_filename": "2019.1A-WSDC-Points-Registry-Rules_Final.pdf"
+      },
+      "sha256": "e07e4c557db1149188fd3ab3bc572425e429c1996e937ffc18ffa8b802a0dd46",
+      "bytes": 225250,
+      "pages": 3,
+      "predecessor": [
+        "2018.1B-RPR"
+      ]
+    },
+    {
+      "id": "2019.1A-RER-fr",
+      "document": "RER",
+      "title": "Règles des Épreuves du WSDC Registry",
+      "version": "2019.1A",
+      "effective": "2019-02-15",
+      "published": "2019-08-25",
+      "status": "translation",
+      "lang": "fr",
+      "translation_of": "2019.1A-RER",
+      "pdf": "pdf/2019.1A-RER-fr.pdf",
+      "html": null,
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20250109122552/https://www.worldsdc.com/wp-content/uploads/2019/08/R%C3%A8gles-des-%C3%89preuves-du-WSDC-Registry_15.2.2019-English_25.08.2019-French.pdf",
+        "removed_from_source": true
+      },
+      "notes": "French translation dated 25.08.2019. Removed from worldsdc.com; copy from the Wayback Machine.",
+      "sha256": "2c8066b7b648afcf00277e0734ae57d71d1a574bcd0965c5ee3dde19dc8e89d3",
+      "bytes": 252096,
+      "pages": 9
+    },
+    {
+      "id": "2019.1A-RPR-fr",
+      "document": "RPR",
+      "title": "Règles du Registry des points du WSDC",
+      "version": "2019.1A",
+      "effective": "2019-02-15",
+      "published": "2019-08-25",
+      "status": "translation",
+      "lang": "fr",
+      "translation_of": "2019.1A-RPR",
+      "pdf": "pdf/2019.1A-RPR-fr.pdf",
+      "html": null,
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20250109142122/https://www.worldsdc.com/wp-content/uploads/2021/01/R%C3%A8gles-du-Registry-des-points-du-WSDC_15.2.2019-English_25.08.2019-French.pdf",
+        "removed_from_source": true
+      },
+      "notes": "French translation dated 25.08.2019. Removed from worldsdc.com; copy from the Wayback Machine.",
+      "sha256": "56ace0fbb2fea50e262f604a9a515b544b958bbaba8ed9df2a325b007d3c40eb",
+      "bytes": 340050,
+      "pages": 4
+    },
+    {
+      "id": "2019.1A-RPR-ru",
+      "document": "RPR",
+      "title": "WSDC Points Registry Rules (Russian)",
+      "version": "2019.1A",
+      "effective": "2019-02-15",
+      "published": "2021-04-01",
+      "status": "translation",
+      "lang": "ru",
+      "translation_of": "2019.1A-RPR",
+      "pdf": "pdf/2019.1A-RPR-ru.pdf",
+      "html": null,
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2019.1A-WSDC-Points-Registry-Rules_Final-Russian.pdf",
+        "original_filename": "2019.1A-WSDC-Points-Registry-Rules_Final-Russian.pdf"
+      },
+      "sha256": "c79b08ad8f42923e4147f4fa21b47405ae992e6bdaafaf490fd6310477e2f1b7",
+      "bytes": 549762,
+      "pages": 4
+    },
+    {
+      "id": "2020.1A-RER",
+      "document": "RER",
+      "title": "WSDC Registry Event Rules",
+      "version": "2020.1A",
+      "effective": "2020-01-01",
+      "published": "2021-02-02",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2020.1A-RER_with-addendum-2021-05.pdf",
+      "pdf_pages": "1-8",
+      "html": "html/2020.1A-RER.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2020.1B-Registry-Event-Rules_with-addendum-5-14-2021.pdf",
+        "original_filename": "2020.1B-Registry-Event-Rules_with-addendum-5-14-2021.pdf"
+      },
+      "notes": "The archived file name says 2020.1B, the document itself says 'RER Version 2020.1A' and 'Current version dated 1.1.2020'. Pages 9-10 of the PDF are the May 2021 addendum (see 2021-05-ADD). The same text was published in February 2021 as '2020.1B-Registry-Event-Rules_vFinal.pdf' (without the addendum).",
+      "sha256": "8716989ba11aee3894d8eb58ae3d9da53effd76c6691211d885b380044c8f4bc",
+      "bytes": 737651,
+      "pages": 10,
+      "predecessor": [
+        "2019.1A-RER"
+      ]
+    },
+    {
+      "id": "2020.1A-RPR",
+      "document": "RPR",
+      "title": "WSDC Points Registry Rules",
+      "version": "2020.1A",
+      "effective": "2020-01-01",
+      "published": "2021-02-02",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2020.1A-RPR_with-addendum-2021-05.pdf",
+      "pdf_pages": "1-4",
+      "html": "html/2020.1A-RPR.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2020.1B-WSDC-Points-Registry-Rules_with-addendum-5-14-2021.pdf",
+        "original_filename": "2020.1B-WSDC-Points-Registry-Rules_with-addendum-5-14-2021.pdf"
+      },
+      "notes": "The archived file name says 2020.1B, the document itself says 'RPR Version 2020.1A'. Pages 5-6 of the PDF are the May 2021 addendum (see 2021-05-ADD). The same text was published in February 2021 as '2020.1B-WSDC-Points-Registry-Rules_vFinal.pdf' (without the addendum).",
+      "sha256": "37fc73e74de99314f6e201d9db41768ee4281198887eeca7cba2643dc9522fae",
+      "bytes": 752077,
+      "pages": 6,
+      "predecessor": [
+        "2019.1A-RPR"
+      ]
+    },
+    {
+      "id": "2020.1A-RER-ru",
+      "document": "RER",
+      "title": "WSDC Registry Event Rules (Russian)",
+      "version": "2020.1A",
+      "effective": "2020-01-01",
+      "published": "2021-04-01",
+      "status": "translation",
+      "lang": "ru",
+      "translation_of": "2020.1A-RER",
+      "pdf": "pdf/2020.1A-RER-ru.pdf",
+      "html": null,
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2020.1A-Registry-Event-Rules_Final-Russian.pdf",
+        "original_filename": "2020.1A-Registry-Event-Rules_Final-Russian.pdf"
+      },
+      "sha256": "f74b668a4be17641fc10443aacc08e2249f9f7915d59cee410f15d7e805be5ff",
+      "bytes": 439541,
+      "pages": 9
+    },
+    {
+      "id": "2020.1A-RER-fr",
+      "document": "RER",
+      "title": "WSDC Registry Event Rules (French)",
+      "version": "2020.1A",
+      "effective": "2020-01-01",
+      "published": "2021-02",
+      "status": "translation",
+      "lang": "fr",
+      "translation_of": "2020.1A-RER",
+      "pdf": "pdf/2020.1A-RER-fr.pdf",
+      "html": null,
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20210506222236/https://www.worldsdc.com/wp-content/uploads/2021/02/2020.1A-Registry-Event-Rules_Final-French-Translation.pdf",
+        "removed_from_source": true
+      },
+      "sha256": "14b542b16a4460846028c423a43ad17fcf9d2aa1a645d504e0100cda2424ff6e",
+      "bytes": 388946,
+      "pages": 9
+    },
+    {
+      "id": "2020.1A-RPR-fr",
+      "document": "RPR",
+      "title": "WSDC Points Registry Rules (French)",
+      "version": "2020.1A",
+      "effective": "2020-01-01",
+      "published": "2021-02",
+      "status": "translation",
+      "lang": "fr",
+      "translation_of": "2020.1A-RPR",
+      "pdf": "pdf/2020.1A-RPR-fr.pdf",
+      "html": null,
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20220927052311/https://www.worldsdc.com/wp-content/uploads/2021/02/2020.1A-WSDC-Points-Registry-Rules_Final-French-Translation.pdf",
+        "removed_from_source": true
+      },
+      "sha256": "0c27c4b4ceae068188da2838e9d3a1670d5037b7b09dab693a4eaee4e54e9782",
+      "bytes": 349243,
+      "pages": 4
+    },
+    {
+      "id": "2021-05-ADD",
+      "document": "ADD",
+      "title": "Addendum to Registry Rules May 2021",
+      "version": null,
+      "effective": "2021-05-14",
+      "published": "2021-05-14",
+      "status": "final",
+      "lang": "en",
+      "amends": [
+        "2020.1A-RER",
+        "2020.1A-RPR"
+      ],
+      "pdf": "pdf/2021-05-ADD.pdf",
+      "html": "html/2021-05-ADD.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2020-May-Addendum.pdf",
+        "original_filename": "2020-May-Addendum.pdf"
+      },
+      "notes": "Non-dominant role competing and tracking, lower competitor requirements for 2021, continued freeze of the 3-year window. Identical to pages 9-10 / 5-6 of the 2020.1A PDFs.",
+      "sha256": "a981967e834e209043e2ae2aaf196d843a4d820e5dc1d538dd606715cbe35b16",
+      "bytes": 506074,
+      "pages": 2,
+      "predecessor": []
+    },
+    {
+      "id": "2023.1B",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2023.1B",
+      "effective": "2023-01-01",
+      "published": "2022-11-02",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2023.1B.pdf",
+      "html": "html/2023.1B.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2023-Registry-Event-Rules_vFinal2-2023.1B.pdf",
+        "original_filename": "2023-Registry-Event-Rules_vFinal2-2023.1B.pdf"
+      },
+      "notes": "First combined document: Points Registry Rules and Registry Event Rules merged.",
+      "sha256": "2a2a2475f84af4d1bf305590b56d3e0590e0a8ba5fc491bcab388c3b537dccf5",
+      "bytes": 378241,
+      "pages": 13,
+      "predecessor": [
+        "2020.1A-RER",
+        "2020.1A-RPR"
+      ]
+    },
+    {
+      "id": "2023.1C-2023-06-08",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2023.1C",
+      "effective": "2023-07-05",
+      "published": "2023-06-08",
+      "status": "variant",
+      "lang": "en",
+      "variant_of": "2023.1C",
+      "pdf": "pdf/2023.1C-2023-06-08.pdf",
+      "html": null,
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20231025024912/https://www.worldsdc.com/wp-content/uploads/2023/06/2023-Registry-Event-Rules_vFinal3-2023.1C.pdf",
+        "original_filename": "2023-Registry-Event-Rules_vFinal3-2023.1C.pdf",
+        "removed_from_source": true
+      },
+      "notes": "First release of 2023.1C (June 8, 2023). The text equals 2023.1C; only the footnote symbols were changed on September 25, 2023.",
+      "sha256": "852a9cda12a29c14571e721ee8d3d97306349b5f94d80ce342adc5a563e649af",
+      "bytes": 560587,
+      "pages": 14
+    },
+    {
+      "id": "2023.1C",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2023.1C",
+      "effective": "2023-07-05",
+      "published": "2023-09-25",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2023.1C.pdf",
+      "html": "html/2023.1C.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2023-Registry-Event-Rules_vFinal3b-2023.1D.pdf",
+        "original_filename": "2023-Registry-Event-Rules_vFinal3b-2023.1D.pdf"
+      },
+      "summary_pdf": "pdf/2023.1C-summary.pdf",
+      "notes": "The archived file name says 2023.1D, the footer says 'RER Version 2023.1C' and 'Version dated June 8, 2023. Updated September 25, 2023 to change footnote symbols only.' Its version list contains '11.22.2022', a typo for 11.2.2022 (2023.1B). Summary of changes: WSDC changes July 2023 Summary.",
+      "sha256": "db564e44adfb480c45c93e3f8493bbdd5983c95e96642f83b83ace6baaa0f836",
+      "bytes": 294236,
+      "pages": 14,
+      "predecessor": [
+        "2023.1B"
+      ]
+    },
+    {
+      "id": "2024.1DRAFT",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules - DRAFT",
+      "version": "2024.1DRAFT",
+      "effective": null,
+      "published": "2023-11-08",
+      "status": "draft",
+      "lang": "en",
+      "draft": true,
+      "pdf": "pdf/2024.1DRAFT.pdf",
+      "html": "html/2024.1DRAFT.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20231130002727/https://www.worldsdc.com/wp-content/uploads/2023/11/2024-Registry-Event-Rules_vDRAFT_11082023.pdf",
+        "original_filename": "2024-Registry-Event-Rules_vDRAFT_11082023.pdf",
+        "removed_from_source": true
+      },
+      "notes": "Draft of the 2024 rules, November 8, 2023.",
+      "sha256": "b24e966cc207ee6524d1cbde7303b84d0b18bb62270b72f9b001e6a22ff65f5d",
+      "bytes": 725545,
+      "pages": 14,
+      "predecessor": [
+        "2023.1C"
+      ]
+    },
+    {
+      "id": "2024.1A",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2024.1A",
+      "effective": "2024-01-01",
+      "published": "2023-12-18",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2024.1A.pdf",
+      "html": "html/2024.1A.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2024-Registry-Event-Rules_vFRER-Version-2024.1A.pdf",
+        "original_filename": "2024-Registry-Event-Rules_vFRER-Version-2024.1A.pdf"
+      },
+      "sha256": "cdc9b4cff28cc4a5b7de94f13163911cf7e4cdab364d81332464e4ed1f3e028e",
+      "bytes": 566189,
+      "pages": 15,
+      "predecessor": [
+        "2023.1C"
+      ]
+    },
+    {
+      "id": "2024.1B",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2024.1B",
+      "effective": "2024-03-27",
+      "published": "2024-03-22",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2024.1B.pdf",
+      "html": "html/2024.1B.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2024-Registry-Event-Rules_v2024.1B.pdf",
+        "original_filename": "2024-Registry-Event-Rules_v2024.1B.pdf"
+      },
+      "sha256": "ff69eef10b54e3d9c018f77814886e14eebe44bfbda61488decebaa8ebbb0a79",
+      "bytes": 568578,
+      "pages": 15,
+      "predecessor": [
+        "2024.1A"
+      ]
+    },
+    {
+      "id": "2024.2A",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2024.2A",
+      "effective": "2024-07-01",
+      "published": "2024-05-30",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2024.2A.pdf",
+      "html": "html/2024.2A.html",
+      "source": {
+        "via": "wsdc-analytics",
+        "url": "https://wsdc-analytics.github.io/static/rules/2024-Registry-Event-Rules_v2024.2A.pdf",
+        "original_filename": "2024-Registry-Event-Rules_v2024.2A.pdf"
+      },
+      "notes": "Yellow = changes effective January 1, 2024; green = changes effective July 1, 2024.",
+      "sha256": "90a8b92da12bb9be4ae03b0e6f0f2b9a7d785b871fb9c900c13deceb68de018d",
+      "bytes": 579441,
+      "pages": 17,
+      "predecessor": [
+        "2024.1B"
+      ]
+    },
+    {
+      "id": "2024.2B",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2024.2B",
+      "effective": "2024-07-01",
+      "published": "2024-07-12",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2024.2B.pdf",
+      "html": "html/2024.2B.html",
+      "source": {
+        "via": "worldsdc",
+        "url": "https://worldsdc.com/wp-content/uploads/2024/07/2024-Registry-Event-Rules_v2024.2B.pdf",
+        "original_filename": "2024-Registry-Event-Rules_v2024.2B.pdf",
+        "removed_from_source": true
+      },
+      "notes": "Yellow = changes effective January 1, 2024; green = changes effective July 1, 2024. Minor updates added on July 11, 2024 (noted with a footnote).",
+      "sha256": "e77040f5ac7f4e40e2365dcfb6073ff6c05de2f7ce1ab6d0e75da42aaf8c4253",
+      "bytes": 586021,
+      "pages": 17,
+      "predecessor": [
+        "2024.2A"
+      ]
+    },
+    {
+      "id": "2025.DRAFT.v4",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules - DRAFT",
+      "version": "2025.v4DRAFT",
+      "effective": null,
+      "published": "2024-11-14",
+      "status": "draft",
+      "lang": "en",
+      "draft": true,
+      "pdf": "pdf/2025.DRAFT.v4.pdf",
+      "html": "html/2025.DRAFT.v4.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20241206222223/https://www.worldsdc.com/wp-content/uploads/2024/11/wsdcrules.pdf",
+        "original_filename": "wsdcrules.pdf",
+        "removed_from_source": true
+      },
+      "notes": "Draft v4 of the 2025 rules (PDF dated November 14, 2024). The same file was uploaded again in November 2025 as 2025-Registry-Event-Rules_v4.pdf.",
+      "sha256": "60f52f44ae0d2ee7e1600c5b3197c62190476e7551b4a891ca9dee116cb9e69c",
+      "bytes": 773835,
+      "pages": 18,
+      "predecessor": [
+        "2024.2B"
+      ]
+    },
+    {
+      "id": "2025.1A",
+      "document": "COMBINED",
+      "title": "WSDC Registry Event Rules",
+      "version": "2025.1A",
+      "effective": "2025-01-01",
+      "published": "2024-12-13",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2025.1A.pdf",
+      "html": "html/2025.1A.html",
+      "source": {
+        "via": "worldsdc",
+        "url": "https://www.worldsdc.com/wp-content/uploads/2024/12/wsdcrules.pdf",
+        "original_filename": "wsdcrules.pdf",
+        "removed_from_source": true
+      },
+      "summary_pdf": "pdf/2025.1A-ccj-summary.pdf",
+      "notes": "Summary of changes: CCJ Rules Update 2025-01 (chiefjudge.worldsdc.com/wp-content/uploads/2025/01/CCJ_Rules_Update_2025-01.pdf).",
+      "sha256": "09aa49b74f8319fc5159b4e05f9d88ef9ac20dcc4362a835a9653373601cc785",
+      "bytes": 577554,
+      "pages": 17,
+      "predecessor": [
+        "2024.2B"
+      ]
+    },
+    {
+      "id": "2026.DRAFT",
+      "document": "COMBINED",
+      "title": "2026 DRAFT – WSDC Registry Event Rules",
+      "version": "2026.DRAFT",
+      "effective": null,
+      "published": "2025-12-15",
+      "status": "draft",
+      "lang": "en",
+      "draft": true,
+      "pdf": "pdf/2026.DRAFT.pdf",
+      "html": "html/2026.DRAFT.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20251230033527/https://www.worldsdc.com/wp-content/uploads/2025/12/2026-Draft-WSDC-Registry-Event-Rules_12.15.25.docx.pdf",
+        "original_filename": "2026-Draft-WSDC-Registry-Event-Rules_12.15.25.docx.pdf",
+        "removed_from_source": true
+      },
+      "notes": "Draft of the 2026 rules, December 15, 2025.",
+      "check_ignore_lines": [
+        "^2026 Draft$"
+      ],
+      "check_min_coverage": 0.99,
+      "check_note": "Google Docs export: zero-width spaces in the text layer and superscript ordinals in the Chart 5 header split differently; highlights verified against the page images.",
+      "check_max_long_runs": 1,
+      "sha256": "ad5291672d1223f5c99427b7ed9ff22b100a00db47f9e32fd725a43de5475df9",
+      "bytes": 402010,
+      "pages": 26,
+      "predecessor": [
+        "2025.1A"
+      ]
+    },
+    {
+      "id": "2026.1A",
+      "document": "COMBINED",
+      "title": "2026 WSDC Registry Event Rules",
+      "version": "2026.1A",
+      "effective": "2026-01-01",
+      "published": "2025-12-30",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2026.1A.pdf",
+      "html": "html/2026.1A.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20260109080931/https://www.worldsdc.com/wp-content/uploads/2025/12/WSDC-Registry-Event-Rules-12.30.25.pdf",
+        "original_filename": "WSDC-Registry-Event-Rules-12.30.25.pdf",
+        "removed_from_source": true
+      },
+      "notes": "Published on worldsdc.com on December 30, 2025 and replaced by 2026.1B on January 17, 2026. Copy from the Wayback Machine.",
+      "check_ignore_lines": [
+        "^2026$"
+      ],
+      "sha256": "f1059bc6f7c2d03b2ae0c57424ab3a53f01935d0af658747a4f834893a005249",
+      "bytes": 571593,
+      "pages": 24,
+      "predecessor": [
+        "2025.1A"
+      ]
+    },
+    {
+      "id": "2026.1B",
+      "document": "COMBINED",
+      "title": "2026 WSDC Registry Event Rules",
+      "version": "2026.1B",
+      "effective": "2026-01-01",
+      "published": "2026-01-17",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2026.1B.pdf",
+      "html": "html/2026.1B.html",
+      "source": {
+        "via": "worldsdc",
+        "url": "https://www.worldsdc.com/wp-content/uploads/2026/01/WSDC-Registry-Event-Rules-Jan-17-2026.pdf",
+        "original_filename": "WSDC-Registry-Event-Rules-Jan-17-2026.pdf",
+        "removed_from_source": true
+      },
+      "sha256": "739070bf6f9cd8f0114e9c996f66c48a0f2b021a41cc6e6c3e6efc64c3ab5e3a",
+      "bytes": 345428,
+      "pages": 24,
+      "check_ignore_lines": [
+        "^2026$"
+      ],
+      "predecessor": [
+        "2026.1A"
+      ]
+    },
+    {
+      "id": "2026.1C",
+      "document": "COMBINED",
+      "title": "2026 WSDC Registry Event Rules",
+      "version": "2026.1C",
+      "effective": "2026-01-01",
+      "published": "2026-03-10",
+      "status": "final",
+      "lang": "en",
+      "pdf": "pdf/2026.1C.pdf",
+      "html": "html/2026.1C.html",
+      "source": {
+        "via": "worldsdc",
+        "url": "https://www.worldsdc.com/wp-content/uploads/2026/03/Revised-WSDC-Registry-Event-Rules-Updated-Jan172026-V2026.1B.pdf",
+        "original_filename": "Revised-WSDC-Registry-Event-Rules-Updated-Jan172026-V2026.1B.pdf"
+      },
+      "notes": "The file name says V2026.1B, the footer of every page says 'Version 2026.1C'.",
+      "sha256": "140caae75a8dd3378268e3d353fedf44911c1c2adb981fa4e81650f4e856d3b5",
+      "bytes": 378929,
+      "pages": 24,
+      "predecessor": [
+        "2026.1B"
+      ]
+    },
+    {
+      "id": "2026.1D",
+      "document": "COMBINED",
+      "title": "2026 WSDC Registry Event Rules",
+      "version": "2026.1D",
+      "effective": "2026-01-01",
+      "published": "2026-05-22",
+      "status": "final",
+      "withdrawn": true,
+      "lang": "en",
+      "pdf": "pdf/2026.1D.pdf",
+      "html": "html/2026.1D.html",
+      "source": {
+        "via": "wayback",
+        "url": "https://web.archive.org/web/20260606224547/https://www.worldsdc.com/wp-content/uploads/2026/05/Revised-WSDC-Registry-Event-Rules-05-22-2026.pdf",
+        "original_filename": "Revised-WSDC-Registry-Event-Rules-05-22-2026.pdf",
+        "removed_from_source": true
+      },
+      "notes": "Revision of May 22, 2026, archived on June 6, 2026. The file has since been removed from worldsdc.com and the Rules & Info page links 2026.1C (as of November 24, 2026), so 2026.1D is treated as not in force until the WSDC confirms otherwise.",
+      "sha256": "ed1e840fb91ceb917b162d436b39ca9764bc9eb7363740d66c19625678b619c7",
+      "bytes": 343944,
+      "pages": 24,
+      "predecessor": [
+        "2026.1C"
+      ]
+    },
+    {
+      "id": "2027.V.1",
+      "document": "COMBINED",
+      "title": "2027 Draft WSDC Registry Event Rules",
+      "version": "2027.V.1",
+      "effective": null,
+      "published": null,
+      "status": "missing",
+      "lang": "en",
+      "draft": true,
+      "pdf": null,
+      "html": null,
+      "notes": "Earlier draft, not found."
+    },
+    {
+      "id": "2027.V.2",
+      "document": "COMBINED",
+      "title": "2027 Draft WSDC Registry Event Rules",
+      "version": "2027.V.2",
+      "effective": null,
+      "published": null,
+      "status": "missing",
+      "lang": "en",
+      "draft": true,
+      "pdf": null,
+      "html": null,
+      "notes": "Earlier draft, not found."
+    },
+    {
+      "id": "2027.V.3",
+      "document": "COMBINED",
+      "title": "2027 Draft WSDC Registry Event Rules",
+      "version": "2027.V.3",
+      "effective": null,
+      "published": "2026-07-15",
+      "status": "draft",
+      "lang": "en",
+      "draft": true,
+      "pdf": "pdf/2027.V.3.pdf",
+      "html": "html/2027.V.3.html",
+      "source": {
+        "via": "worldsdc",
+        "url": "https://worldsdc.com/wp-content/uploads/2026/07/2027-Draft-WSDC-Registry-Event-Rules1.pdf",
+        "original_filename": "2027-Draft-WSDC-Registry-Event-Rules1.pdf"
+      },
+      "notes": "Corrected second upload of V.3 on July 15, 2026 (evening). Changes are highlighted in green.",
+      "sha256": "c0bd5bdcded5f522369f8706134ef9c6f987118d7e5eb1d1f0c3b68e2f815754",
+      "bytes": 465739,
+      "pages": 29,
+      "check_ignore_lines": [
+        "^2027 DRAFT$",
+        "^DRAFT$",
+        "^2027$"
+      ],
+      "predecessor": [
+        "2026.1C"
+      ]
+    },
+    {
+      "id": "2027.V.4",
+      "document": "COMBINED",
+      "title": "2027 Draft WSDC Registry Event Rules",
+      "version": "2027.V.4",
+      "effective": null,
+      "published": "2026-11-17",
+      "status": "draft",
+      "lang": "en",
+      "draft": true,
+      "pdf": "pdf/2027.V.4.pdf",
+      "html": "html/2027.V.4.html",
+      "source": {
+        "via": "worldsdc",
+        "url": "https://worldsdc.com/wp-content/uploads/2026/11/2027-Draft-WSDC-Registry-Event-Rules-v4.pdf",
+        "original_filename": "2027-Draft-WSDC-Registry-Event-Rules-v4.pdf"
+      },
+      "notes": "Changes are highlighted in green. Footer: 'Version 2027.V.4 11.17.2026'.",
+      "sha256": "b74eebe5cf542df5bf0c6fe8e95ed53ba545a0b826a054f83e136807348332ad",
+      "bytes": 568562,
+      "pages": 29,
+      "predecessor": [
+        "2027.V.3"
+      ],
+      "check_ignore_lines": [
+        "^2027 DRAFT$",
+        "^DRAFT$",
+        "^2027$"
+      ]
+    },
+    {
+      "id": "2027.V.3-pre",
+      "document": "COMBINED",
+      "title": "2027 Draft WSDC Registry Event Rules",
+      "version": "2027.V.3",
+      "effective": null,
+      "published": "2026-07-15",
+      "status": "draft",
+      "lang": "en",
+      "draft": true,
+      "pdf": "pdf/2027.V.3-pre.pdf",
+      "html": null,
+      "source": {
+        "via": "worldsdc",
+        "url": "https://worldsdc.com/wp-content/uploads/2026/07/2027-Draft-WSDC-Registry-Event-Rules-Updated.pdf",
+        "original_filename": "2027-Draft-WSDC-Registry-Event-Rules-Updated.pdf"
+      },
+      "notes": "First upload of V.3 on July 15, 2026 (morning). Differs from the later upload only on page 17 (typo 'Chief Judget' and the 'Without Prelim' row of the rounds table). Kept as PDF only; see 2027.V.3.",
+      "sha256": "2bed5b86c7495c82771e2d16790787e8dbd520d190e32b9e2a17f84d2de870a0",
+      "bytes": 465753,
+      "pages": 29,
+      "check_ignore_lines": [
+        "^2027 DRAFT$",
+        "^DRAFT$",
+        "^2027$"
+      ]
+    }
+  ],
+  "current": "2026.1C",
+  "generated": "2026-11-24"
+}

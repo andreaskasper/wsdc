@@ -7,7 +7,7 @@ This repository contains various functions and scripts developed for the World S
 
 ## Features
 
-- **Rules**: Current rules as a readable .html file.
+- **Rules archive** ([`rules/`](rules/README.md)): every known version of the WSDC rules since 2002 as HTML and PDF, with the WSDC's own change highlights, a viewer and a word-level comparison of any two versions. `registry_event_rules.html` is a generated copy of the version currently in force.
 - **xml Schemas**: A project to automatically upload and archive event results.
 
 ## Getting Started
