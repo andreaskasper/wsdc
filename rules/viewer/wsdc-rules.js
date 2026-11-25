@@ -176,11 +176,13 @@
     return out;
   }
 
+  // Parsed in a separate, inert document: images in the fragment are not loaded
+  // until the nodes are inserted into the page (paths may not be rewritten yet).
+  var inertDoc = null;
   function parseFragment(html) {
-    var t = document.createElement("template");
-    t.innerHTML = html;
-    var div = document.createElement("div");
-    div.appendChild(t.content);
+    if (!inertDoc) inertDoc = document.implementation.createHTMLDocument("");
+    var div = inertDoc.createElement("div");
+    div.innerHTML = html;
     return div;
   }
 
